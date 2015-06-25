@@ -1,6 +1,9 @@
 .title-row {
-    .pane-node-janrain-share-settings + .pane-node-title{
-        width:100%;
+    .pane-node-janrain-share-settings {
+        + .panel-pane,
+        + .pane-node-title {
+            width:100%;
+        }
     }
 }
 
