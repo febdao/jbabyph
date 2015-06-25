@@ -1,0 +1,56 @@
+
+
+.related-content-carousel {
+    h2 {
+        @include bi-direction-style(text-align, center, text-align, center);
+        @include google_lato_font(normal);
+        @include global-font-resize-jbaby(50);
+        color: $JJPink;
+    }
+    .slide {
+
+        img {
+            max-height: 231px;
+            width: auto; 
+            margin: 10px;
+        }
+        .grid-item .related-cta {
+            @include bi-direction-style(text-align, center, text-align, center);
+            font-weight: 400;            
+        }        
+        a + a { 
+            position: relative;        
+            bottom: 2%;
+        }
+        a {
+            @include google_sans_font(regular);
+            @include global-font-resize-jbaby(28,36);
+
+            color: $primaryColor;
+            width: 100%;
+            display: block;
+            sup {
+                font-size: 100%;
+                top: 0 !important;
+            }            
+        }
+        @include device-size(tablet) {        
+            @include bi-direction-style(margin-left, 1%, margin-right, 0);
+        }
+    }
+
+    // Related products -- OLD
+    .pane-rhw-related-products{
+        margin: 0 0 2% 0;
+
+        .pane-title{
+            h2{
+                margin: 0 0 2% 0;
+                @include google_sans_font(light);
+                font-weight: bold;
+                @include font-size(22,24);
+                color: $primaryColor;
+            }
+        }
+    }   
+}

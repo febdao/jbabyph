@@ -1,0 +1,32 @@
+.page-privacy {
+    //hide default one
+    .section-inner-wrapper > h1 {
+        display: none; 
+    }
+
+
+    .mobile-and-tablet {
+        @include device-size(desktop) {
+            display: none;
+        }
+        @include device-size(tablet) {
+            display: block;
+        }
+        @include device-size(mobile) {
+            display: block;
+        }
+    }
+    
+}
+
+
+.page-legal {
+
+    //hide default one
+    .section-inner-wrapper > h1 {
+        display: none;
+    }
+}
+
+
+

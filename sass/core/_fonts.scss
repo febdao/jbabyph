@@ -1,0 +1,108 @@
+
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,300,300italic,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+$fontPath: "../../contrib-fonts/";
+
+@font-face {
+    font-family: 'omnesregular';
+    src: url('#{$fontPath}omnes-regular-webfont.eot');
+    src: url('#{$fontPath}omnes-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$fontPath}omnes-regular-webfont.woff2') format('woff2'),
+         url('#{$fontPath}omnes-regular-webfont.woff') format('woff'),
+         url('#{$fontPath}omnes-regular-webfont.ttf') format('truetype'),
+         url('#{$fontPath}omnes-regular-webfont.svg#omnesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'omnesbold';
+    src: url('#{$fontPath}omnes-bold-webfont.eot');
+    src: url('#{$fontPath}omnes-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$fontPath}omnes-bold-webfont.woff2') format('woff2'),
+         url('#{$fontPath}omnes-bold-webfont.woff') format('woff'),
+         url('#{$fontPath}omnes-bold-webfont.ttf') format('truetype'),
+         url('#{$fontPath}omnes-bold-webfont.svg#omnesbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'omneslight';
+    src: url('#{$fontPath}omneslight-webfont.eot');
+    src: url('#{$fontPath}omneslight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$fontPath}omneslight-webfont.woff2') format('woff2'),
+         url('#{$fontPath}omneslight-webfont.woff') format('woff'),
+         url('#{$fontPath}omneslight-webfont.ttf') format('truetype'),
+         url('#{$fontPath}omneslight-webfont.svg#omneslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'omnessemibold';
+    src: url('#{$fontPath}omnessemibold-webfont.eot');
+    src: url('#{$fontPath}omnessemibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$fontPath}omnessemibold-webfont.woff2') format('woff2'),
+         url('#{$fontPath}omnessemibold-webfont.woff') format('woff'),
+         url('#{$fontPath}omnessemibold-webfont.ttf') format('truetype'),
+         url('#{$fontPath}omnessemibold-webfont.svg#omnessemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'omnessemibold_italic';
+    src: url('#{$fontPath}omnessemibold-italic-webfont.eot');
+    src: url('#{$fontPath}omnessemibold-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$fontPath}omnessemibold-italic-webfont.woff2') format('woff2'),
+         url('#{$fontPath}omnessemibold-italic-webfont.woff') format('woff'),
+         url('#{$fontPath}omnessemibold-italic-webfont.ttf') format('truetype'),
+         url('#{$fontPath}omnessemibold-italic-webfont.svg#omnessemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'fs_albertregular';
+    src: url('#{$fontPath}fsalbert-webfont.eot');
+    src: url('#{$fontPath}fsalbert-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$fontPath}fsalbert-webfont.woff2') format('woff2'),
+         url('#{$fontPath}fsalbert-webfont.woff') format('woff'),
+         url('#{$fontPath}fsalbert-webfont.ttf') format('truetype'),
+         url('#{$fontPath}fsalbert-webfont.svg#fs_albertregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'fs_albertbold';
+    src: url('#{$fontPath}fsalbert-bold-webfont.eot');
+    src: url('#{$fontPath}fsalbert-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$fontPath}fsalbert-bold-webfont.woff2') format('woff2'),
+         url('#{$fontPath}fsalbert-bold-webfont.woff') format('woff'),
+         url('#{$fontPath}fsalbert-bold-webfont.ttf') format('truetype'),
+         url('#{$fontPath}fsalbert-bold-webfont.svg#fs_albertbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

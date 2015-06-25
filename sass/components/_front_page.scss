@@ -1,0 +1,47 @@
+// Adjust slightly for front page.
+.front {
+
+    .breadcrumb-row {
+        display: none;
+    }
+    .content-row {
+        background-image:  image-url('backgrounds/front_bk.png');
+
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: $siteBackgroundColor_front;
+        padding-bottom: 15px;
+        @include device-size(mobile) {
+            background-image:  image-url('backgrounds/front_mobile_bk.png');
+        }    
+        .section-inner-wrapper {
+            background-color: transparent;    
+        }
+    }
+
+    .hompage-tri {
+        margin-bottom: 1%;
+    }
+    .homepage-middle {
+        margin-bottom: 2%;
+        margin-top: 1%;
+
+        &.first-col h3 {
+            color: $section5_title;
+        }
+        &.last-col h3 {
+            color: $section6_title;
+        }
+
+    }
+    .homepage-promise {
+        margin-bottom: 2.5%;
+    }
+}
+
+.smm.front {
+
+    .content-row {
+        background-image:  image-url('backgrounds/front_bk_smm.png');
+    }
+}

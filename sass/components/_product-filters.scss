@@ -1,0 +1,159 @@
+// Products page - Product Filters
+
+.pane-views-exp-products-panel-pane-1, .views-exposed-form-products-3-categories-panel-pane-1 {
+  //float: left;
+  //width: 21.5%;
+  height: auto;
+  margin: 0 3.8% 0 0;
+  padding-bottom: 30px;
+
+
+
+  .views-exposed-widget {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background-color: #fff;
+
+    // Title
+    > label:not(.option) {
+      display: block;
+      padding: 4% 8%;
+      margin-bottom: 0;
+
+      @include font-size(14,16);
+      @include google_sans_font(bold);
+      color: $primaryColor;
+      text-transform: uppercase;
+      background: #E3F4F8;
+      border-bottom: 1px solid #cce4f3;
+      border-top: 1px solid #cce4f3;
+    }
+
+    .views-widget {
+      padding: 4% 8%;
+      
+      .form-type-bef-checkbox{
+        margin: 0;
+
+        > label {
+          @include font-size(13,15);
+          @include google_sans_font(normal);
+          font-weight: normal;
+        }
+
+        &.highlight {
+          label {
+            @include google_sans_font(bold);  
+            color: #032e67;            
+          }
+        }
+      }
+    }
+
+    &:first-child {
+      border-top: 1px solid #e0e0e0;
+	  @include border-radius(10px 10px 0px 0px);
+
+      > label {
+        border-top: none;
+        @include border-radius(10px 10px 0px 0px);
+      }
+    }
+
+    &.views-widget-filter-field_product_category_tid{
+      border-bottom: 1px solid #e0e0e0;
+      //@include border-radius(0px 0px 10px 10px);  // These don't seem to work...
+    }
+  }
+
+  // Button Filter
+  .views-submit-button, .views-reset-button {
+    border: none;
+
+    background: none;
+
+    input{
+      padding: 10% 14%;
+      font-weight: normal;
+	  @include font-size(16);
+	  line-height: 1.5rem;
+	  @include device-size(mobile) {
+		padding: 3% 6%;
+	  }
+    }
+  }
+}
+
+
+.pane-views-exp-products-panel-pane-1 .views-exposed-form {
+    margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+
+
+
+
+@include device-size(mobile) {
+	.pane-views-ac13188961f32cfdc300abbd2e842e28 {
+		padding-bottom: 0px;
+		.views-exposed-widget:first-child {
+			border: 0px;
+			
+		}
+		.views-exposed-widget {
+			border: 0px;
+			//width: 33%; //*******
+		}
+                
+  
+		.views-exposed-widget:nth-last-child(2) {
+			margin-bottom: 10px;
+			border-bottom: 1px solid #e0e0e0;
+			//@include border-radius(0px 0px 0px 0px);  //******* 
+			@include border-radius(0px 0px 10px 10px);
+		}
+
+		.views-exposed-widget > label:not(.option) {
+			padding: 4% 6%;
+		}	
+        //.views-exposed-widget:first-child > label {	//******* 
+		//	@include border-radius(0px 0px 0px 0px);  //******* 
+		//}  //******* 
+		
+		
+		.views-exposed-widget .views-widget {
+			padding: 2% 8%;
+		}	  
+	
+		.ui-accordion .ui-accordion-header {
+			margin-top: 0px;
+		}
+                
+		.ui-accordion .ui-accordion-header .ui-accordion-header-icon {	  
+			left: auto;
+			right: 1em;	
+			top: 55%;
+		}
+		.ui-state-default .ui-icon {
+			@include retina_sprite("plus");			
+		}
+		.ui-state-active .ui-icon {
+			@include retina_sprite("less");	
+		}  
+		
+		.ui-corner-all, .ui-corner-top, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+			@include border-radius(0px 0px 0px 0px);
+		}
+	}
+	
+	
+	
+}
+
+
+

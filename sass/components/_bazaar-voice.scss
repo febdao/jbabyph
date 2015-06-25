@@ -1,0 +1,578 @@
+#BVSubmissionContainer .BVSection {
+    background-image: none;
+    background-color: #f3f3f3;
+    padding: 20px;
+}
+.node-type-product {
+    .bv-section {
+        clear: both;
+    }
+}
+
+
+//Make this responsive
+.page-bv-review {
+    .BVSubmissionInProgress.BVBrowserFF {
+        max-width: 920px;
+    }
+    .BVSectionReviewSubmission {
+        width: 100%;
+    }
+
+    .BVPageEdit, .BVPagePreview, .BVPageSubmitted {
+        width: 100%;
+        margin-left: 0px;
+        form {
+            width: 100%;
+        }
+    }
+    .BVSectionReviewSubmission {
+        width: 100%;
+    }
+    .BVSocialConnectFields {
+        width: 100%;
+    }
+    .BVFieldText, .BVFieldTextArea {
+        width: 100%;
+    }
+    .BVFieldReviewtext {
+        width: 100%;
+    }
+    .BVFooter {
+        width: 100%;
+    }
+    .BVErrors {
+        width: 100%;
+    }
+    .BVContentPreview .BVRRReviewDisplayStyle3Main {
+        width: 100%;
+    }
+
+    .BVRRReviewDisplayStyle3Main {
+        float: left;
+        margin-left: 0;
+    }
+
+    .BVField div.star_hover a, .BVField div.star_live a:hover {
+        //background-image: image-url('ratingStars_star.gif');  // bring this bazaarvoice stuff
+
+    }
+
+
+    // Override these starts because the BazaarReview overrides them set below.
+    .BVField div.star, .BVField div.star a {
+        @include retina-sprite(rating-star-unchecked);
+
+    }
+
+    .BVField div.star_on a {
+        @include retina-sprite(rating-star-active);
+    }
+
+    .BVField div.star_hover a, .BVField div.star_live a:hover {
+        @include retina-sprite(rating-star-hover);
+
+    }
+
+
+}
+// Write a Review Form (Anonymous)
+
+#BVSectionSubjectInformationID{
+    display:none;
+}
+
+#BVSU_SearchProductsContainer{
+
+    .BVSU_Search .BVSULinkBrowseAllProducts, .BVSU_Search .BVSULinkBrowseAllProducts:visited {
+        height: 24px;
+    }
+}
+
+#BVSubmissionContainer{
+    .BVMEPopinTip {
+        left: 120px;
+        top: 30px;
+    }
+    @include device-size(mobile) {
+        .BVMEPopinTip iframe, .BVMEPopinContent {
+            left: 0;
+            position: fixed;
+            top: initial;
+        }
+    }
+    .BVMERequiredFieldIndicatorSectionHeader {
+        left: 0;
+        position: relative;
+        right: 0;
+        padding-bottom: 20px;
+    }
+    .BVSection {
+        background-image: none;
+        background-color: #f3f3f3;
+        padding: 20px;
+        width: 100%;
+    }
+    .BVFieldRequired .BVFieldText, .BVFieldRequired .BVFieldTextArea {
+        background-color: #ffffff;
+    }
+    .BVFieldText, .BVFieldTextArea     {
+        background-color: #ffffff;
+    }
+    .BVFieldLabel,
+    .BVFieldRequired .BVFieldLabel,
+    input[type="checkbox"],
+    label,
+    .BVCheckboxField .BVFieldLabel {
+        @include font-size(13);
+        color: $grey_copy;
+        @include google_sans_font(bold);
+    }
+    .BVTextCounter {
+        @include font-size(11);
+        color: $grey_copy;
+        @include google_sans_font(normal);
+    }
+    .BVFieldSelect {
+        width: auto;
+    }
+
+    // OVerall rating
+    .BVRatingStars {
+        background-color: #fff;
+        display: block;
+        height: 35px;
+        padding: 5px 10px;
+        width: 145px;
+        @include border-radius(1rem);
+        @include box-shadow(0px 2px 4px rgba(0,0,0,.2));
+    }
+
+    // Related product recommendations
+    .BVPLInsideProduct {
+        border: 3px solid #ebebeb;
+    }
+    .BVPLProductImage {
+        height: 80px;
+    }
+    .BVPLInsideProductEmpty {
+        padding: 5px 5px 25px;
+        background-color: #fff;
+    }
+    .BVPLProductEmptyFirst .BVPLProductImage a {
+        background-image: image-url('openSearch.png');
+        background-repeat: no-repeat;
+    }
+    .BVPLProductEmpty .BVPLInsideProductEmpty .BVPLProductImage a {
+        height: 80px;
+    }
+    .BVPLProductAction {
+        bottom: 0;
+        position: absolute;
+        left: 75px;
+        a {
+            @include font-size(13);
+            color: $grey_copy;
+            @include google_sans_font(bold);
+
+        }
+    }
+
+    .BVMEPageHeader{
+        @include font-size(37);
+        color:$secondaryForegroundColor;
+        font-family: $primaryFontFamily;
+        font-weight:700;
+        margin-top:0;
+
+        @include device-size(mobile){
+            @include font-size(23);
+            margin-bottom:0;
+        }
+    }
+    .BVMEWelcomeMessage{
+        @include font-size(16, 20);
+        @include bi-direction-style(border-right, 1px solid $primaryColor, border-left, 1px solid $primaryColor);
+        @include bi-direction-style(margin-right, 10px, margin-left, 10px);
+        @include bi-direction-style(padding-right, 10px, padding-left, 10px);
+        color: $primaryColor;
+        font-family: $secondaryFontFamily;
+        margin-bottom:25px;
+    }
+
+    .BVMESectionHeader{
+        @include font-size(22);
+        color: $grey_copy;
+        @include google_sans_font(normal);
+        margin-top:0;
+
+        @include device-size(mobile){
+            @include font-size(18);
+        }
+    }
+
+    .BVMESubHeaderMessage{
+        @include font-size(16, 20);
+        margin-bottom:25px;
+        color: $primaryColor;
+        font-family: $secondaryFontFamily;
+    }
+
+    .BVRequiredFieldIndicator{
+        color: #f16477;
+        margin:0 2px;
+    }
+
+    .BVMESubHeaderMessage{
+        display:block;
+    }
+
+    #BVFieldTitleContainerID{
+        width:100%;
+    }
+
+    #BVSectionRatingsID,
+    #BVSectionReviewSubmissionID,
+    #BVSectionMediaUploadID,
+    #BVSectionBasicInformationID,
+    #BVSectionNetPromoterID{
+        .BVMESectionHeader{
+            display:block;
+            margin-top:10px;
+        }
+
+        .BVField{
+            @include col();
+            @include bi-direction-style(margin-left, 0, margin-right, 0);
+            margin-bottom:2%;
+
+            &.first-col,
+            &:first-child {
+                @include span_first;
+            }
+
+            @include device-size(mobile){
+                margin-left:0 !important;
+                margin-right:0 !important;
+            }
+        }
+
+        #BVFieldNetpromotercommentContainerID{
+            display:block;
+        }
+
+        label{
+            font-weight:700;
+        }
+
+        #BVFieldNetpromotercommentContainerID,
+        #BVFieldReviewtextContainerID {
+            label,
+            #BVFieldNetpromotercommentFieldHelperID{
+                display:block;
+            }
+        }
+
+        .BVInputWrapper input{
+            margin-bottom:10px;
+        }
+
+    }
+
+    #BVSectionRatingsID{
+        .BVField{
+            @include shorthand-span-column(one-third, 12);
+        }
+
+        #BVFieldRecommendContainerID{
+            @include shorthand-span-column(full, 12);
+            @include bi-direction-style(margin-left, 0, margin-right, 0);
+
+            label{
+                font-weight:500
+            }
+        }
+    }
+
+    #BVFieldPhotoContainerID,
+    #BVFieldVideourl_1ContainerID{
+        @include shorthand-span-column(full, 12);
+    }
+
+    #BVModuleReviewSubmissionTipsID,
+    #BVModulePhotoUploadTipsID,
+    .BVMEStaticTip{
+        @include col();
+        @include bi-direction-style(margin-left, 2%, margin-right, 2%);
+        @include shorthand-span-column(full, 12);
+        margin-bottom:2%;
+        background-color:$siteContentBackground;
+        margin-bottom:10px;
+        padding:$outerPadding;
+
+        &.first-col,
+        &:first-child {
+            @include span_first;
+        }
+
+        @include device-size(mobile){
+            margin-left:0 !important;
+            margin-right:0 !important;
+        }
+    }
+
+
+    #BVSectionReviewSubmissionID{
+
+        #BVFieldTitleFieldHelperID,
+        #BVFieldTitleCounterID{
+            @include inline-block();
+            @include font-size(11);
+            color: $grey_copy;
+            @include google_sans_font(normal);
+        }
+
+        #BVFieldTitleFieldHelperID{
+            @include bi-direction-style(border-right, 0px solid lighten($primaryColor, 10), border-left, 0px solid lighten($primaryColor, 10));
+            @include bi-direction-style(margin-right, 10px, margin-left, 10px);
+            @include bi-direction-style(padding-right, 10px, padding-left, 10px);
+        }
+
+    }
+
+    #BVModuleTagsID{
+
+        #BVFieldTagProContainerID,
+        #BVFieldTagConContainerID{
+            @include shorthand-span-column(half, 12);
+
+            .BVTagSectionHeaderContainer{
+                font-weight:700;
+            }
+
+            .BVTagRow{
+                margin-bottom:10px;
+            }
+        }
+
+        #BVFieldTagProContainerID{
+            @include bi-direction-style(margin-left, 0, margin-right, 0);
+        }
+    }
+
+    #BVModuleVideoUploadID{
+
+        #BVFieldVideocaption_1ContainerID{
+            @include shorthand-span-column(full, 12);
+            @include bi-direction-style(margin-left, 0, margin-right, 0)
+        }
+
+        ul{
+            @include bi-direction-style(padding-left, 40px, padding-right, 40px);
+            margin:1em 0;
+        }
+
+        li{
+            margin-bottom:0;
+        }
+    }
+
+    #BVSectionBasicInformationID{
+        .BVField {
+            @include shorthand-span-column(full, 12);
+            @include bi-direction-style(margin-left, 0, margin-right, 0);
+        }
+    }
+
+    .BVButton{
+        @include button($primaryColor);
+        @include google_sans_font(bold);
+        @include font-size(14);
+        border: 0px;
+    }
+    .BVFieldPreview .BVButton,
+    .BVFieldSubmit .BVButton {
+        height: auto;
+        text-transform: none;
+        background-image: none;
+    }
+    #BVModuleFooterLinksID{
+        a{
+            display:block;
+        }
+    }
+}
+
+#BVDivFieldNetPromoterScoreRadioLegendContainerID{
+    @include shorthand-span-column(full, 12);
+    @include bi-direction-style(margin-left, 0, margin-right, 0);
+    display:block;
+}
+
+#BVFieldNetpromoterscoreContainerID{
+    display:block;
+}
+
+.BVFieldRadioContainer {
+    @include bi-direction-style(padding, 0 6px 0 0, padding, 0 0 0 6px);
+
+    label{
+        @include bi-direction-style(padding, 0 6px 0 0, padding, 0 0 0 6px);
+    }
+}
+
+.BVFieldLowValue,
+BVFieldHighValue{
+    padding:0 6px 0 0;
+}
+
+
+
+.BVRatingStars div{
+    &.star {
+        @include retina-sprite(rating-star-unchecked);
+        @include bi-direction-style(float, left, float, right);
+        display:block;
+        text-indent: -9999em;
+        cursor: pointer;
+        zoom: 1;
+
+        &.rating {
+            cursor: pointer;
+            margin: 2em;
+            clear: both;
+            display: block;
+
+            &:after {
+                content: '.';
+                display: block;
+                height: 24px;
+                width: 0;
+                clear: both;
+                visibility: hidden;
+            }
+        }
+
+        a {
+            @include transition-duration(0s);
+            display:block;
+            zoom: 1;
+            outline: 0;
+        }
+    }
+
+    &.star_on a {
+        @include retina-sprite(rating-star-active);
+    }
+
+    &.star_hover a,
+    &.star_live a:hover {
+        @include retina-sprite(rating-star-hover);
+    }
+
+    &.star_readonly a,
+    &.star_readonly a:hover {
+        cursor: default !important;
+    }
+
+}
+
+.BVRatingStars div.cancel,
+.BVRatingStarsCancelTooltip{
+    display:none;
+}
+
+.BVRatingStarsLegend{
+    .BVRatingStarsDisplayValue{
+        display:none;
+    }
+
+    .BVRatingStarsLegendValue{
+        @include bi-direction-style(padding, 0 0 0 2.5%, padding, 0 2.5% 0 0);
+        @include inline-block();
+        color:lighten($primaryColor, 20);
+        font-style:italic;
+        font-weight:700;
+        vertical-align: top;
+    }
+}
+
+// BV auto-complete
+.BVAutocomplete{
+    ul{
+        @include box-shadow(1px 1px 10px #000);
+        background-color:#fff;
+        list-style-type:none;
+        margin:0;
+        padding:1.5%;
+    }
+
+    li{
+        cursor:pointer;
+    }
+}
+
+// Write a Review (Signed In)
+.BVContentPreview{
+    background-color:$primaryColor;
+    border:1px solid lighten($primaryColor, 40);
+    margin-bottom:10px;
+    padding:$outerPadding;
+}
+
+#BVSubmissionPopupContainer{
+
+    .BVRRNickname{
+        @include font-size(23);
+        color: $primaryColor;
+        font-weight:700;
+        font-family: $secondaryFontFamily;
+        margin-top:0;
+
+        @include device-size(mobile){
+            @include font-size(18);
+        }
+    }
+    .BVRRLabel{
+        @include bi-direction-style(margin-right, 8px, margin-left, 8px);
+        font-weight:700;
+    }
+}
+
+.BVRRReviewDisplayStyle5Header{
+    @include shorthand-span-column(full, 12);
+    @include bi-direction-style(margin-left, 0, margin-right, 0);
+}
+
+.BVRRReviewDisplayStyle5BodyUser,
+.BVRRReviewDisplayStyle5BodyContent{
+    @include col();
+}
+
+.BVRRReviewDisplayStyle5BodyUser{
+    @include shorthand-span-column(one-third, 12);
+}
+
+.BVRRReviewDisplayStyle5BodyContent{
+    @include shorthand-span-column(two-thirds, 12);
+}
+
+.BVRRReviewDisplayStyle5BodyUser{
+    @include bi-direction-style(margin-left, 0, margin-right, 0);
+}
+
+.BVPageBody{
+    .BVContentPreview{
+        background-color:$siteContentBackground;
+    }
+}
+.BVImgOrSprite{
+    height: 3px!important;
+    img {
+        margin-left: 0!important;
+        position: relative;
+        left: 45px;
+    }
+}
+
+

@@ -1,0 +1,64 @@
+
+
+// Node Type Product
+.node-type-product {
+
+    .content-row .accordion ul {
+        display: block;
+    }
+    // Product title
+    .pane-node-title{
+        h1{
+            @include google_lato_font(light);
+            letter-spacing: -1px;
+            @include font-size(41, 41);
+            color: $secondaryForegroundColor;
+            margin: 0 0 10% 0;
+
+            @include at-tablet-breakpoint{
+                @include font-size(35,37);
+            }
+            @include at-mobile-breakpoint{
+                @include font-size(30,32);
+            }
+        }
+    }
+    .field-item p, .field-item ul, .field-item a { 
+        @include font-size(14,18);  
+    }
+    .field--name-body a, 
+    .field--name-field-guidelines a,
+    .accordion > .menu .field-item a { 
+        @include font-size(14,18);  
+        @include google_sans_font(400);  
+    }    
+    .field--name-field-guidelines p a {
+        text-decoration: underline;
+    }
+
+    // Product image
+    .pane-node-field-product-image{
+        padding: 0;
+        margin: 0 0 10% 0;
+
+    }
+
+    // Product tabs (more in _product-tabs.scss)
+    .pane-panels-mini.pane-product-tabs{
+        margin-top: 12%;
+    }
+
+    .pane-node-field-related-solr-products {
+        clear: both;
+    }
+
+    .panel-col-first{
+        .pane-two-column-callout{
+            margin-bottom: 10%;
+        }
+    }
+
+    #bv-statistics-breakdown .breakdown-head .button {
+        position: relative;
+    }
+}

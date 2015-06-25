@@ -1,0 +1,7 @@
+.grid-item{ 
+  @include bi-direction-style(margin-left, 0 !important, margin-right, 0 !important);
+  background-color: transparent;
+  line-height: 1.5rem;
+  padding: 0px;
+}
+

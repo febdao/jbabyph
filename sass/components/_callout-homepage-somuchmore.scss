@@ -1,0 +1,73 @@
+.fp-somuchmore.pane-taco-pane.taco-full-width {
+    .image-col {
+        width: 33%;
+    }
+    .content-col {
+        padding-top: 3%;
+        padding-left: 3%;
+        width: 66%;
+        p {
+            padding-left: 0;
+        }
+    }
+    h1 {
+        //margin-left: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;        
+        color: $JJPink;
+        @include font-resize-jbaby(70,90);
+        @include google_lato_font(normal);
+    }  
+    .call-to-action {
+        left: 0;
+    }    
+
+    .bean-taco p {
+        //padding-left: 0px !important;
+        margin-top: 20px;
+        @include font-resize-jbaby(36,48);         
+    }
+    .field--name-field-taco-link-call-to-action {
+
+        width: 65%;
+
+    }  
+    .field--name-field-taco-links a {
+        width: 70%;
+    }
+    @include device-size(tablet) {
+        h1 {
+            @include font-resize-jbaby(50,50);
+            width: 100%;
+        } 
+        .bean-taco p {
+            margin-top: 0;
+            @include font-resize-jbaby(30,40);          
+        } 
+        .field--name-field-taco-links a {
+            width: 100%;
+        }
+        .field--name-field-taco-link-call-to-action {
+
+            width: 66%;
+
+        }        
+        .content-col {
+            padding-left: 3%;
+            padding-top: 0;
+            width: 65%;
+        }        
+    }
+    @include device-size(mobile) {
+        .image-col {
+            width: 100%;
+        }        
+        .field--name-field-taco-link-call-to-action {
+
+            width: 100%;
+        }  
+        .field--name-field-taco-links a {
+            width: 100%;
+        }          
+    }
+}

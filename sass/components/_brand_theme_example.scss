@@ -1,0 +1,21 @@
+// This is an example file to show how to add css (scss) files to the brand sub theme
+// You can name the file anything you want and the file will be loaded when the CSS is compiled
+// If you would like to extend a base SCSS file, create a file with the same name and place it in the same folder
+// If you would like to overwrite the base SCSS file, create a file with the same name and copy the following line (as a comment) into the top of that file
+// Prominent
+// This will remove any SCSS loaded by the base theme
+
+.brand-theme-example-module {
+  border: 5px solid red;
+  padding: 10px;
+  margin: 10px;
+  position: absolute;
+  display: block;
+  bottom: 50px;
+  z-index: 999;
+
+  .title {
+    color: red;
+    font-size: 14px;
+  }
+}

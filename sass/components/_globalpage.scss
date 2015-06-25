@@ -1,0 +1,27 @@
+
+@import "contrib-structure/sprites/global-flags/*.png";
+@include all-global-flags-sprites;
+
+.small-global-flags { // overriding all sprites
+   @include resize-sprite-set($global-flags-sprites, 50); // 50% sized
+}
+
+.small-global-flags {
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	margin: 20px;
+	min-height: 137px;
+	max-height: 137px;	
+	min-width: 117px;
+	max-width: 117px;
+}
+.global-flags-sprite {
+	width: 77px;
+	height: 77px;
+	display: block;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+}

@@ -1,0 +1,75 @@
+/// ==============================
+// Callout: Footer coupon
+/// ==============================
+/*.pane-bean-moms-around-world-trust-johnsons .bean-taco {
+    h3 {
+        color: $JJPink;
+    }
+}
+
+.pane-bean-callout-footer-coupon .bean-taco{
+
+    @include inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+    .content-col {
+        float: left;
+        width: 85%;
+    }
+    .call-to-action {
+        float: right;
+        width: 14%;
+        @include device-size(mobile) {
+            float: none;
+            width: 100%;            
+        }
+    }
+
+    .content{
+
+        .image-col {
+            @include device-size(mobile) {
+                img { width: 100%; }
+            }
+            img {
+                border-radius: 0;
+            }
+        }
+        .field--name-field-taco-description{
+
+            // Logo Healthy Essentials
+            .logo-healthy-essentials{
+                display: inline-block;
+                width: 220px;
+                height: 30px;
+                vertical-align: top;
+                background-image: image-url('logo-healthy-essentials.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                @include hide-text;
+            }
+
+        }
+        .field-collection-view {
+            padding: 0 0 0.3em;
+        }
+        .h2 {
+            color: $JJPink;
+            @include google_lato_font(regular);
+            @include font-size(26,30);  // (50)
+        }
+        p {
+            @include google_sans_font(regular);
+            @include font-size(22);  // (46)
+            color: #333333;
+        }
+    }
+}
+
+.front .panel-col-bottom .bean-taco {
+    margin-left: 0px;
+    margin-right: 0px;
+}*/

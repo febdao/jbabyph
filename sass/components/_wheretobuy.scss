@@ -1,0 +1,74 @@
+
+
+.section-where-to-buy {
+    .pane-jjbos-eretailer-taxonomy-displays {
+        ul {
+            list-style-type: none;
+            background-color: #fff;
+        }   
+        li {
+            width: auto;
+            height: 80px;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 10px;
+        }
+    }
+}
+
+
+.page-where-to-buy {
+
+    .pane-jjbos-eretailer-taxonomy-displays.two-tabs {
+        .view, .pane-store-locator-search-form {
+            background-color: #efefef;
+            margin-bottom: 2%;
+            padding: 40px 2% 2%;
+            width: 100%;
+        }
+    }
+    .pane-find-a-store.two-tabs {
+
+        .view, .pane-store-locator-search-form {
+            background-color: #efefef;
+            margin-bottom: 2%;
+            padding: 50px 2% 2%;
+            width: 100%;
+        }
+    }
+    
+    .pane-store-locator-map-results {
+        @include google_sans_font(regular);  
+        @include font-size(15);
+    }
+
+
+    // Where to buy tabs -- switch colors 
+    .pane-jjbos-eretailer-taxonomy-displays,
+    .pane-find-a-store{
+
+
+        // More than one tab present
+        &.two-tabs{
+            .pane-title{
+                @include button($primaryInteractiveColor);
+
+                h2{
+                    color:$primaryInteractiveForegroundColor;
+
+                }
+
+                &.active-tab{
+                    @include button($containerBackgroundColor);
+
+
+                    h2{
+                        color:$primaryInteractiveColor;
+
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,192 @@
+
+
+
+@mixin section-color($bk, $bk_image, $content_bk, $charm) {
+    .content-row {
+        background-color: $bk;
+        .section-inner-wrapper {
+            background-color: transparent;
+        }        
+        background-image: image-url($bk_image);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        @include device-size(mobile) {
+            background-image: none;
+        }
+
+    }
+
+
+    .content-row .title-row {
+        margin-bottom: 10px;
+
+        .section-inner-wrapper {
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+    }
+
+    .content-row .main-row  {
+        @include gradient-create("horizontal", $content_bk, #FFFFFF);
+        filter: none;   // Overriding this for IE 9 since its picking it up.
+        margin-bottom: 0px;
+        @include border-radius(1rem 1rem 0 0);
+        @include box-shadow(0px 2px 2px 0px #CCCCCC);
+
+        padding: 20px;
+        margin-left: -3%;
+        margin-right: -3%;  
+        @include device-size(tablet) {
+            margin-left: 1%;
+            margin-right: 1%;              
+        }
+    }
+    .content-row .bottom-row  {
+        background-color: #FFFFFF;
+        margin-bottom: 0px;
+
+        @include box-shadow(0px 3px 2px 0px #CCCCCC);
+
+        padding: 20px;
+        margin-left: -3%;
+        margin-right: -3%;
+        @include device-size(tablet) {
+            margin-left: 0;
+            margin-right: 0;              
+        }        
+    }   
+
+    .content-container{     
+        .field--name-field-slide-headline {
+
+            .field__item::after {
+                content: ' ';
+                margin-left: 20px;
+                background-image: image-url($charm);
+                background-repeat: no-repeat;
+                background-size: contain;
+                @include device-size(tablet) {      
+                    display: none;
+                }                
+                @include device-size(mobile) {      
+                    display: none;
+                }
+
+                display: inline-block;
+                height: 43px;
+                width: 43px;
+            }
+        }    
+    }
+}
+
+@mixin section-color-title($titleColor) {
+    .bean-taco {
+        h2, h3{
+            color: $titleColor;
+        }
+    }
+    .pane-node-body {
+        h1, h2, h3 {
+            color: $titleColor;
+        }
+    }
+    .text-box {
+
+        h2 {
+            color: $titleColor;
+        }
+    }
+}
+
+
+
+.section-preparing-for-baby {
+    @include section-color($section2_bk, "backgrounds/02_bk.jpg", $content_bk, "charms/charms2.png");
+    @include section-color-title($section2_title);
+}
+.section-caring-your-baby, .section-skin-care, .section-baby-massage-guide-six-weeks-plus, .section-newborn-massage-guide, .section-baby-massage-guide-six-months-plus {
+    @include section-color($section3_bk, "backgrounds/03_bk.jpg", $content_bk, "charms/charms3.png");
+    @include section-color-title($section3_title);
+}
+.section-bathing-baby, .section-bath {
+    @include section-color($section4_bk, "backgrounds/04_bk.jpg", $content_bk, "charms/charms4.png");
+    @include section-color-title($section4_title);
+}
+.section-baby-bedtime-routine, .section-bedtime {
+    @include section-color($section5_bk, "backgrounds/05_bk.jpg", $content_bk, "charms/charms5.png");
+    @include section-color-title($section5_title);
+}
+.section-diapering-guide, .section-diapering {
+    @include section-color($section6_bk, "backgrounds/06_bk.jpg", $content_bk, "charms/charms6.png");
+    @include section-color-title($section6_title);
+}
+.section-play-learning, .section-play-and-learning{
+    @include section-color($section7_bk, "backgrounds/07_bk.jpg", $content_bk, "charms/charms7.png");
+    @include section-color-title($section7_title);
+}
+.page-node-148, .page-node-150, .page-node-163,
+.page-node-149, .page-node-162 {
+    @include section-color(#f1ecdf, "backgrounds/johnson_difference_bk.jpg", $content_bk, "");
+}
+
+
+.page-baby-products {
+    @include section-color(#f1ecdf, "backgrounds/01_bk.jpg", #FFF, "");
+}
+// Change background to pink
+
+.section-privacy-policy, .section-products, .page-search, .page-bv-review,
+.page-node-147, .page-legal, .page-node-16, .page-node-3 {
+    .content-row {
+        background-color: #fce6ea;
+
+        .section-inner-wrapper {
+            padding: 0 20px 20px;
+            position: relative;
+        }
+    }
+    .breadcrumb-row {
+        .section-inner-wrapper {
+            padding: 0 0 20px;
+        }
+    }
+
+    .carousel-row .slide.text-left .content-container, .carousel-row .slide.text-right .content-container {
+        background-color: transparent;
+    }
+    .carousel-row .carousel-row-container {
+        max-height: 100px;
+    }
+}
+//reset this page so we can see hero copy on global page.
+.page-node-16 .carousel-row .carousel-row-container {
+    max-height: 200px; 
+}
+
+// Hide background on top level pages
+.no-background {
+    .content-row .title-row {
+        margin-bottom: 30px;
+    }
+    .content-row .main-row  {
+        background-color: transparent;
+        background-image: none;
+        margin-bottom: 20px;
+        filter: none;   // Overriding this for IE 9 since its picking it up.
+        @include border-radius(0px 0px 0px 0px);
+        @include box-shadow(0px 0px 0px 0px #CCCCCC);
+        padding: 0px;
+    }
+    .content-row .bottom-row  {
+        background-color: transparent;
+        margin-bottom: 15px;
+        background-image: none;
+        filter: none;   // Overriding this for IE 9 since its picking it up.
+        @include border-radius(0px);
+        @include box-shadow(0px 0px 0px 0px #CCCCCC);
+        padding: 0px;
+    } 
+}
+

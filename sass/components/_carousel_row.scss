@@ -1,0 +1,692 @@
+//Prominent
+
+.carousel-row-container {
+    position: relative;
+}
+
+    @include device-size(tablet) {
+        .carousel-row.full-width {
+            //force this to be full width since the accordion script seems to like to due margin-left stuff
+            @include bi-direction-style(margin-left, -4.5% !important, margin-right, 0 );
+        }
+    }
+
+.front .carousel-row{
+    overflow:hidden;
+    width:$pageWidth;
+
+
+    // Prevent the image meta tag info from showing
+    .field__items .content div,
+    .janrain-share-container{
+        display:none;
+    }
+
+    .section-inner-wrapper{
+        background-color:transparent;
+        margin:0 0 20px;
+        padding:0 0 45px 0;
+        @include device-size(tablet) {
+            padding: 0 0 10px;
+        }
+        position:relative;
+        background-image:  image-url('heroimage.png');  // blue swoop
+        background-repeat: no-repeat;
+        background-size: contain;  
+        background-position: bottom center;
+        @include device-size(mobile) {
+            background-image: none;
+        }	
+    }
+
+    // Will make the carousel stretch to the full width of screen
+    /*    &.full-width{
+            @include bi-direction-style(left, 50%, right, 50%);
+            width:100%;
+    
+            .section-inner-wrapper{
+                max-width:100%;
+                width:100%;
+            }
+        }  */
+
+
+
+    .carousel-row-container{
+        overflow:hidden;
+        position:relative;
+    }
+
+    .slide{
+        @include inline-block();
+        @include bi-direction-style(float, left, float, right);
+        display:none;
+        overflow:hidden;
+        position:relative;
+        vertical-align:top;
+        width:100%;
+
+        &.first-slide{
+            display:block;
+        }
+
+        .content-container{
+            @include bi-direction-style(left, 50%, right, 50% );
+            @include bi-direction-style(margin-left, $pageWidth/-2, margin-right, $pageWidth/-2 );
+            display:block;
+            max-width:$pageWidth;
+            position:absolute;
+            top:0;
+            left: 0;
+            width:100%;
+
+            @include device-size(large-desktop) {
+                top: 11%;
+            }
+            @include device-size(desktop) {
+                top: 4%;
+            }		
+            @include device-size(tablet) {   
+                top: 0;
+            }	  
+
+            padding-bottom: 150px;  
+            @include device-size(tablet) { 
+                padding-bottom: 50px;      
+            }	  
+
+            @media (max-width: $pageWidth) {
+                @include bi-direction-style(left, 0, right, 0 );
+                @include bi-direction-style(margin-left, 0, margin-right, 0 );
+            }
+            .inner {
+                @include bi-direction-style(padding, 2% 0 2% 8%, padding, 2% 8% 2% 0 );
+                @include device-size(mobile) { 
+                    min-height: 230px;
+                }
+            }
+
+            .field--name-field-slide-headline {
+                .field__items{
+                    .field__item{
+
+                        @include font-resize-jbaby(90,90);
+                        color: $primaryColor;
+                        @include google_lato_font(light);
+                        margin: 0 0 2% 0;
+
+                        h3 {
+                            @include google_lato_font(light);
+                        }
+                        @include at-tablet-breakpoint{
+
+                            @include font-resize-jbaby(70,70);
+                        }
+                        @include at-mobile-breakpoint{
+                            color: $HeroTitles;
+                            @include font-resize-jbaby(60,60);
+                            width: 50%;
+                            @include google_lato_font(light);                  
+                        }
+                    }
+                }
+            }
+
+            .field--name-field-slide-copy{
+                margin: 0 0 2% 0;
+                color: $grey_copy;
+                p {
+                    @include google_sans_font(normal);
+                    @include font-resize-jbaby(36,48);
+                }
+                @include device-size(tablet) { 
+                    display: block;
+                }
+                p {
+                    margin: 0;
+                } 
+            }
+            .field--type-link-field a {
+                @extend .basic-button;
+                width: auto;
+                position: relative;
+                display: inline-block;
+                filter: none;   // Overriding this for IE 9 since its picking it up.
+                background-color: $primaryColor;
+                @include prefix(border-radius, 20px);
+                padding: 10px 29px 8px 20px;
+                color: #FFF;
+
+                &:after {
+                    @include retina_sprite("arrow-right-white");
+                    display: inline-block;
+                    content: ' ';	  		  
+                    width: 13px;
+                    height: 21px;
+                    top: 0;
+                    bottom: 0;
+                    right: 10px;
+                    margin: auto;
+                    position: absolute;
+                }
+
+                @include at-mobile-breakpoint{
+                    @include font-size(15, 18);
+                    padding: 8px 32px 6px 18px;
+                    height: auto;
+                    width: auto;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+
+        }
+
+        .inner{
+            @include bi-direction-style(padding, 1% 0 2% 8%, padding, 1% 8% 2% 0 );
+            width:50%;
+            max-width: 1028px;
+            @include device-size(large-desktop) {
+                margin-left: 9%;
+                width: 35%;
+            }
+            @include device-size(desktop) {
+                margin-left: 5%;
+                width: 40%;
+            }
+            @include device-size(tablet) {
+                margin-left: 0;
+                width: 45%;
+            }
+            @include device-size(mobile) {
+                width: 100%;
+
+            }
+            display: block;
+
+            h3{
+                @include font-size(20);
+                margin-bottom:10px;
+            }
+
+            .button{
+                @include inline-block();
+                @include font-size(14);
+                padding: 10px 14px;
+            }
+
+            @include device-size(tablet) {
+                h3{
+                    @include font-size(16);
+                    margin-bottom:5px;
+                }
+                .field--name-field-slide-copy{
+                    @include font-size(12);
+                    margin-bottom:5px;
+                }
+                .button{
+                    @include font-size(13);
+                    padding: 7px 10px;
+                }
+            }
+
+            @include device-size(mobile) {
+                p{
+                    display:none;
+                }
+            }
+        }
+
+        .image-container{
+            overflow:hidden;
+            width:100%;
+
+            .element-invisible{
+                margin:0;
+            }
+
+            img{
+                display:block;
+                margin:0 auto;
+                position:relative;
+            }
+        }
+
+        @include device-size(mobile) {
+            .content-container{
+                position:absolute;
+            }
+
+            .inner{
+                @include bi-direction-style(padding, $outerPadding !important, padding, $outerPadding !important );
+                @include bi-direction-style(right, 0, left, 0 );
+                bottom:initial;
+                overflow:hidden;
+                margin:0 auto;
+                position:relative;
+                width:100%;
+
+                .field--name-field-slide-copy{
+                    display:none;
+                }
+            }
+
+            .image-container{
+                height:100%;
+                position:relative;
+
+                img{
+                    height:auto;
+                    max-width:none;
+                    position:relative;
+                    width:100%;
+                }
+            }
+        }
+
+        //Top Right slide layout
+        &.top-right{
+
+            .inner{
+                @include bi-direction-style(padding, 2% 9% 2% 0, padding, 2% 0 2% 9% );
+                @include bi-direction-style(float, right, float, left );
+
+            }
+
+            @include device-size(mobile) {
+
+                .inner{
+                    @include bi-direction-style(right, 0, left, 0 );
+                    width:50%;
+                }
+            }
+        }
+
+        // Bottom Center slide layout
+        &.bottom-center{
+            .content-container{
+                bottom:0;
+                padding:2% 9% 9px !important;
+                position:absolute;
+                top:auto;
+                width:100%;
+
+                @include device-size(mobile) {
+                    bottom:0;
+                }
+            }
+
+            .inner{
+                width:100%;
+
+                a{
+                    @include bi-direction-style(float, right, float, left);
+
+                    @include device-size(mobile) {
+                        // @include bi-direction-style(float, left, float, right);
+                    }
+                }
+            }
+        }
+
+        &.text-left,
+        &.text-right{
+            overflow:hidden;
+
+            .content-container{
+                background-color:$siteContentBackground;
+                overflow:hidden;
+                position:relative;
+                width:640px;
+
+                @media (max-width: $pageWidth) {
+                    width:50%;
+                }
+
+                @include device-size(tablet) {
+                    width:60%;
+                }
+            }
+
+            .inner{
+                padding:0 !important;
+                position:relative;
+                width:auto;
+            }
+
+            .image-container{
+                position:relative;
+                width:50%;
+                z-index:10;
+
+                @include device-size(tablet) {
+                    width:40%;
+                }
+            }
+
+            @include device-size(mobile) {
+                @include bi-direction-style(padding, 0 !important, padding, 0 !important );
+                height:auto !important;
+                max-height:none;
+
+                .content-container{
+                    @include bi-direction-style(padding, 0 $outerPadding !important, padding, 0 $outerPadding !important );
+                    @include bi-direction-style(float, none, float, none);
+                    position:relative;
+                    width:100%;
+                }
+
+                .inner{
+                    min-height:0;
+                    width:100%;
+                }
+
+                .image-container{
+                    position:relative;
+                    width:100%;
+
+                    img{
+                        height:auto;
+                        position:relative;
+                        width:100%;
+                    }
+                }
+            }
+        }
+
+        // Text Left slide layout
+        &.text-left{
+
+            .content-container{
+                @include bi-direction-style(padding, 0 4% 6% 9%, padding, 0 9% 6% 4% );
+                @include bi-direction-style(float, left, float, right );
+
+                @include device-size(mobile){
+                    @include bi-direction-style(float, none, float, none );
+                }
+            }
+
+            .inner{
+                @include bi-direction-style(float, left, float, right );
+            }
+
+            .image-container{
+                @include bi-direction-style(float, right, float, left );
+            }
+        }
+
+        //Text Left slide layout
+        &.text-right{
+
+            .content-container{
+                @include bi-direction-style(padding, 0 9% 3% 4%, padding, 0 4% 3% 9% );
+                @include bi-direction-style(left, initial, right, initial );
+                @include bi-direction-style(margin-left, 0, margin-right, 0 );
+
+                @include device-size(mobile){
+                    @include bi-direction-style(right, 0, left, 0 );
+                    @include bi-direction-style(float, none, float, none );
+                }
+            }
+
+            .inner{
+                // @include bi-direction-style(float, right, float, left );
+            }
+
+            .image-container{
+                @include bi-direction-style(float, left, float, right );
+            }
+        }
+    }
+
+}
+
+.not-front .carousel-row{
+    overflow:hidden;
+
+
+    // Prevent the image meta tag info from showing
+    .field__items .content div,
+    .janrain-share-container{
+        display:none;
+    }
+
+    .section-inner-wrapper{
+        background-color:transparent;
+        margin:0 0 20px;
+        padding:0 0 45px 0;
+        position:relative;
+    }
+
+    .image-container {
+        //force this to be full width since the accordion script seems to like to due margin-left stuff
+        margin-left: -8%;
+    }
+
+    .content-container{     
+        h3 {
+
+            margin-top: 0px;
+        }        
+        .field--name-field-slide-headline {
+
+            @include font-resize-jbaby(90, 90);
+            color: $HeroTitles;
+            @include google_lato_font(light);
+            margin: 0 0 2% 0;
+            @include at-tablet-breakpoint{
+                @include font-resize-jbaby(70, 70);
+
+            }
+
+        }
+
+        .field--name-field-slide-copy{
+            margin: 0 0 2% 0;
+            color: $HeroTitles;
+            p {
+                @include google_sans_font(normal);
+                @include font-resize-jbaby(32,44);
+            }
+            @include device-size(tablet) { 
+                display: block;
+            }
+            p {
+                margin: 0;
+            }            
+        }            
+    }
+
+    .inner{ // content container
+            @include bi-direction-style(padding, 1% 0 2% 8%, padding, 1% 8% 2% 0 );
+            @include device-size(large-desktop) {
+                margin-left: 3%;
+                width: 35%;
+            }
+            @include device-size(desktop) {
+                margin-left: 0;
+                width: 35%;
+            }
+            @include device-size(tablet) {
+                margin-top: 1%;
+                width: 40%;
+                p {
+                    display: block;
+                }            
+            }
+            @include device-size(mobile) {
+                width: 100%;
+                p {
+                    display: block;
+                }            
+            }        
+    }
+
+}
+
+.front {
+    .arrow-container,
+    .arrow{
+        height:44px;
+        width: 44px;
+        margin-top:-50px;
+        position:absolute;
+        top:50%;
+
+    }
+
+    .arrow-container{
+
+
+        @include device-size(large-desktop) {
+            max-width:$pageWidth - 240;
+            @include bi-direction-style(margin-left, $pageWidth/-2 - 25, margin-right, $pageWidth/-2 - 25);
+            @include bi-direction-style(left, 50%, right, 50%);
+
+        }
+        @media (max-width:$pageWidth){
+            @include bi-direction-style(left, 0 !important, right, 0 !important);
+            @include bi-direction-style(margin-left, 0 !important, margin-right, 0!important);
+            width:100% !important;
+            max-width: 100%;
+        }
+
+
+    }
+
+    .arrow{
+        background-color: transparent !important;
+        display:block;
+        text-align:center;
+        width:40px;
+        z-index:80;
+
+
+
+        &:before{
+            color:$secondaryInteractiveColor;
+            font-family:'icomoon';
+            font-size:68px;
+            line-height:67px;
+        }
+
+        &:hover,
+            &:focus{
+            background-color: transparent;
+            &:before{
+                color:$secondaryInteractiveHoverColor;
+            }
+        }
+
+        &:active{
+            &:before{
+                color:$secondaryInteractiveActiveColor;
+            }
+        }
+        @include device-size(tablet) {	
+            display: none;
+        } 
+
+        @include device-size(mobile){
+            display:none;
+        }
+
+        [data-icon="angle-right"]:before,
+            .icon-angle-right:before {
+            content: "\e613";
+        }
+
+        [data-icon="angle-left"]:before,
+            .icon-angle-left:before {
+            content: "\e614";
+        }
+
+
+        &.previous{
+            @include bi-direction-style(left, 0%, right, 0% );
+            @include device-size(tablet){ 
+                @include bi-direction-style(left, 1%, right, 1% );
+            }
+            &:before{
+                @include bi-direction-style(content, " ", content, " " );
+                background-image: image-url('home-slider-prev.png');
+                background-size: 44px 44px;
+                background-repeat: no-repeat;	  
+                display: block;
+                width: 44px;
+                height: 44px;
+            }
+        }
+
+        &.next{
+            @include bi-direction-style(right, 0%, left, 0% );
+            @include device-size(tablet){ 
+                @include bi-direction-style(right, 1%, left, 1% );
+            }
+            &:before{
+                @include bi-direction-style(content, " ", content, " " );
+                background-image: image-url('home-slider-next.png');
+                background-size: 44px 44px;
+                background-repeat: no-repeat;	 
+                display: block;	  
+                width: 44px;
+                height: 44px;
+            }
+        }
+    }
+} 
+
+.pane-bean-homepage-carousel .pagination-container{
+    display: none;
+
+
+    @include device-size(tablet) {	
+
+        display:block;
+        bottom: 0px;
+        height: 20px;
+        right: 10px;
+
+        .pagination-inner{
+            @include bi-direction-style(left, 90%, right, 0%);
+
+        }
+
+        @include box-shadow(0px 0px 0px 0px #000);
+        background-color:transparent;
+        ul {
+            padding-right: 4%;
+        }
+        a {
+            height: 12px;
+            width: 12px;
+            border: 1px solid #FFF;
+            background-color: transparent;
+        }
+
+        a:active, a.active-thumbnail {
+            background-color: #FFF;
+            border: 1px solid #FFF;
+        }        
+
+        .knob-container { 
+            display: none !important;
+        }
+
+    }
+    @include device-size(mobile) { 
+        bottom: 120px;
+    }    
+}
+
+@include device-size(mobile) { 
+
+    .view-jjbos-carousel-slideshow {
+        min-height: 225px;
+
+        margin-bottom: 10px;
+        .slide .image-container img {
+            display: none;
+        }
+    }
+}

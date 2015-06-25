@@ -1,0 +1,94 @@
+#block-panels-mini-footer-menus {
+
+    margin-left: 3%;
+    margin-right: 3%;
+
+    .main-row {
+        margin: 0px;
+    }
+    h2 {
+        color: #fff;
+        @include global-font-resize-jbaby(50,50);
+        @include google_lato_font(light);
+        margin: 0;
+    }
+    a {
+        color: #fff;
+        @include global-font-resize-jbaby(30,52);
+        @include google_sans_font(normal);
+
+    }
+    @include device-size(mobile) {
+        ul {
+            li { padding-top: 3%; padding-bottom: 3%;}
+            a {  
+
+                &:after{
+                    @include bi-direction-style(right, 6%, left, $outerPadding);
+                    @include bi-direction-style(content, "\e613", content, "\e614");
+                    font-family:'icomoon';
+                    font-size:24px;
+                    position:absolute;
+                }        
+            } 
+        }
+    }
+    ul {
+        padding-left: 0px;
+        @include device-size(mobile) {
+            padding: .5em;
+        }
+    }
+    .pane-block a.active:before, .pane-menu-tree a.active:before {
+        background-color: transparent;
+    }
+    .pane-block a.active {
+        position: inherit;
+    }    
+    @include device-size(mobile) {
+        .pane-block {
+            border-bottom: 1px solid #a1a1a1;
+        }
+    }
+
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+        background-image: none;
+        border: 0px solid #FFF;
+        background-color: #6d6d6d;
+    }
+    .ui-widget-content {
+        background-image: none;
+        background-color: #6d6d6d;
+        border: 0px solid #FFF;        
+    }
+    .ui-accordion .ui-accordion-header .ui-accordion-header-icon {	  
+        left: auto;
+        right: 1em;	
+        top: 55%;
+    }    
+    .ui-accordion .ui-accordion-icons {
+        padding-left: 0.5em;
+    }    
+    .ui-icon { 
+        text-indent: 0;
+        background-image: none;
+    }
+    .ui-state-default .ui-icon, .ui-state-active .ui-icon {
+    }
+    .ui-state-default .ui-icon:after {
+        color:#FFF;
+        content: "\e60a";
+        display:block;
+        font-family:"icomoon";
+        font-size:12px;
+        position:absolute;
+        top:0;
+
+
+    }
+    .ui-state-active .ui-icon:after {
+        font-family:"icomoon";
+        content: "\e60b" !important;
+
+    } 
+}

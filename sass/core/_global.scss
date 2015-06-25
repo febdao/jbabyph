@@ -1,0 +1,134 @@
+/*
+h1
+Lato Light
+90/90pt  * 46%  =  41/41
+
+h2
+Lato Regular
+50/56pt   * 46%  = 23/26
+
+h3
+Lato Bold 
+32pt  * 46%  =  15
+
+Bodycopy
+FS Albert Regular
+28/40pt  * 46%  =    13/18
+*Exception to body copy rule is hero body copy which is set at 36/48pt on home and 32/44pt on sub pages
+
+Button text
+FS Albert Bold
+38/44pt  * 46%  =  17/20
+
+Right Hand Side Nav
+FS Albert Regular
+38/50pt  * 46%  =   17/23
+58pt between items  * 46%  =  27
+
+*/
+
+body,
+.content-outer-wrapper {
+    color: $grey_copy;
+}
+body.front {
+    background-color: $siteBackgroundColor_front;
+}
+
+@mixin global-font-resize-jbaby ($sizeValue: 1.6, $line: $sizeValue * 1.5, $important: 'not-important'){
+    @include font-size($sizeValue*.46, $line*.46, $important); 
+}
+
+p {
+    color: $grey_copy;
+
+    @include global-font-resize-jbaby(30,42);
+    margin-bottom: 25px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;
+
+    sup {
+        font-size: 100%;
+        top: -0.1em !important;
+    }
+}
+
+li {
+    color:$grey_copy;
+   @include global-font-resize-jbaby(30,42);
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 400;}
+
+
+h1{
+  @include global-font-resize-jbaby(90,90);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+
+}
+
+h2{
+  @include global-font-resize-jbaby(50,56);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+    
+}
+
+h3{
+  @include global-font-resize-jbaby(32,32);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: none;
+}
+
+
+dl{
+    color:$grey_copy;
+}  
+
+.footnote {
+    @include global-font-resize-jbaby(24,40,!important);
+    font-family: 'Lato', sans-serif;
+    a {
+        @include global-font-resize-jbaby(24,40,!important);
+        font-family: 'Lato', sans-serif;
+    }
+    margin-left: 2.2rem;
+}
+
+.button,
+button,
+input[type="submit"]{
+    border-radius: .7rem;
+    padding-top: 5px;
+    background-color: $primaryInteractiveColor;
+    border: 0px;
+}
+
+.button,
+button,
+input[type="submit"]:hover {
+    background-color: $primaryInteractiveHoverColor;
+    border: 0px;
+}
+
+
+.clear-both {
+    clear: both;
+}
+
+img.float-left {
+    float: left;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+@include device-size(tablet) {
+    img.float-left {
+        padding-left: 0px;
+    }
+}

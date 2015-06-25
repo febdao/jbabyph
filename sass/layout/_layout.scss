@@ -1,0 +1,29 @@
+.section-inner-wrapper {
+    max-width: 1024px;
+    padding: 0;
+}
+
+@include device-size(tablet) {
+    .title-row, .main-row, .content-row .pane-node-body, .bottom-row, .page .section-inner-wrapper p  {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .page-where-to-buy .title-row {
+        margin-top: 20px;
+    }
+    .page-privacy h2, .page-legal h2{
+        margin-left: 4%;
+        margin-right: 4%;	
+    }
+
+}
+
+
+.node-type-product {
+    .layout {
+        z-index: 8;
+    }
+    .content-row {
+        overflow: visible;
+    }
+}

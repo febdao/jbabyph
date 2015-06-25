@@ -1,0 +1,12 @@
+.search-button {
+    display: none;
+}
+
+@include device-size(tablet) {
+    .search-button {
+        display: block;
+        top: 5px;
+    }
+}
+
+

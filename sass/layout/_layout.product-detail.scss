@@ -1,0 +1,31 @@
+
+@include device-size(tablet) {
+  .node-type-product .content-row .main-row .region-col{
+
+    width:48%;
+	&.half.no-padding-right {
+		padding-left: 3%;
+	}	
+	.pane-taco-pane.half {
+		max-width: 250px;
+		min-width: 225px;	
+	}
+
+  }
+  // On mobile have the first move over to 2% in case there are more than one, they will be vertically aligned.
+  html[dir="ltr"] .node-type-product .content-row .main-row .region-col .pane-taco-pane.half:first-child {
+    margin-left: 2% !important;
+ }  
+}
+
+@include device-size(mobile) {
+  .node-type-product .content-row .main-row .region-col{
+
+    width:100%;
+	.pane-taco-pane.half {
+		max-width: 100%;
+		min-width: 0;	
+	}
+  }
+  
+}

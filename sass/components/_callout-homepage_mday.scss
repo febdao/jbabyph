@@ -1,0 +1,111 @@
+.fp-mdayfday.pane-taco-pane.horizontal  {
+    .bean-taco {
+        padding: 0.5rem;
+    }
+    .image-col {
+        width: 33%;
+        min-height: 140px;
+    }
+    .content-col {
+        padding-top: 0;
+        padding-left: 3%;
+        width: 66%;
+
+        p {
+            padding-left: 0;
+        }
+    }
+    h1 {
+        //margin-left: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;        
+        color: #0079c1;
+        @include font-resize-jbaby(53,53);
+        font-family: 'fs_albertbold', sans-serif;
+    }  
+    .call-to-action {
+        left: 0;
+    }    
+
+    .bean-taco p {
+        margin-top: 15px;
+        color: #454545;
+        @include font-resize-jbaby(32,38);         
+        strong {
+            color: #454545;
+            @include font-resize-jbaby(32,38);         
+            font-weight: bold;
+        }
+    }
+
+    .field--name-field-taco-links a {
+        width: 95%;
+    }
+    @include device-size(tablet) {
+        h1 {
+            @include font-resize-jbaby(45,45);
+            width: 100%;
+        } 
+        .bean-taco p {
+            margin-top: 0;
+            @include font-resize-jbaby(28,38);          
+        } 
+        .field--name-field-taco-links a {
+            width: 100%;
+        }
+
+        .field--name-field-taco-links{
+            .field-collection-item-field-taco-links {
+                .field-item{
+                    text-align: right;
+                }
+            }
+        }
+        .bean-taco .call-to-action .field--name-field-taco-links .field-collection-item-field-taco-links .field-item a {
+                background-color: transparent;
+        }
+
+        .bean-taco .call-to-action .field--name-field-taco-links .field-collection-item-field-taco-links .field-item a {
+            padding: 10px 26px 8px 20px;
+        }        
+        .image-col {
+            width: 336px;
+        }        
+        .content-col {
+            padding-left: 3%;
+            padding-top: 0;
+            width: calc(100% - 336px);
+        } 
+        .field--name-field-taco-link-call-to-action {
+             width: auto;
+        }        
+    }
+    //Awkard stage on small tablets where the two column looks bad, so drop to one column
+    @media (min-width: 640px) and (max-width: 748px)	 { 
+        .image-col {
+            width: 250px;
+        }        
+        .content-col {
+            width: calc(100% - 250px);
+        }
+        .field--name-field-taco-link-call-to-action {
+            width: auto;
+        }  
+        
+    }
+    @include device-size(mobile) {
+        .image-col {
+            width: 100%;
+        }  
+        .content-col { 
+            width: 100%;
+        }
+
+        .field--name-field-taco-link-call-to-action {
+            width: 100%;
+        }  
+        .field--name-field-taco-links a {
+            width: 100%;
+        }          
+    }
+}

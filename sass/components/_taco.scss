@@ -1,0 +1,178 @@
+
+.pane-taco-pane, .bean-taco {
+
+    background-color: transparent;
+
+    .field--name-field-taco-link-call-to-action, .field--name-field-taco-links{
+        display:table;
+        width:auto;
+        float: right;
+        height:auto !important;
+        position: relative;
+        @include device-size(mobile) {
+            float: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+
+        }
+    }
+
+    .field--name-field-taco-link-call-to-action a, .field--name-field-taco-links a {
+        width: auto;  
+        height:auto !important;   
+
+        &:after {
+            @include bi-direction-style(content, " ", content, " ");
+            @include bi-direction-style(right, 0px, left, 0px);	
+            @include retina_sprite("arrow-right-blue");
+            display: inline-block;
+            width: 13px;
+            height: 21px;
+            margin-top: 0px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+        }
+        @include device-size(mobile) {      
+            text-align: center;
+            &:after {            
+                position: relative;
+                margin-left: 10px;       
+                top: 5px;
+            }
+        }
+
+    }
+
+    .field-collection-container {
+        border-bottom: 0px;
+        margin-bottom: 0px;
+    }
+
+    @include device-size(mobile) {
+        .call-to-action {
+            position: relative;
+            padding-right: 1rem;
+        }
+    }
+
+}
+
+
+.cta-blue  .bean-taco {
+
+
+
+    .field--name-field-taco-link-call-to-action a, .field--name-field-taco-links a {
+        @extend .basic-button;
+
+        background-color: $primaryColor !important;
+        color: #FFF !important;
+        width: auto;
+        position: relative;
+        display: inline-block !important;
+        filter: none;   // Overriding this for IE 9 since its picking it up.        
+        @include prefix(border-radius, 20px);
+        @include google_sans_font(bold);
+        @include global-font-resize-jbaby(32,38,!important);  // supose to be 38/44 but too large to fit in space..
+        @include device-size(mobile) {
+            @include global-font-resize-jbaby(38,44,!important);  
+        }
+
+        &:after {
+            @include retina_sprite("arrow-right-white-open");
+            display: inline-block;
+            content: ' ';	  		  
+            width: 13px;
+            height: 19px;
+            top: 0;
+            bottom: 0;
+            right: 5px;
+            margin: auto 5px auto auto;
+            position: absolute;
+        }    
+    }
+
+    .field--name-field-taco-links .field-collection-item-field-taco-links .field-item a    {
+        padding: 7px 25px 7px 10px;
+    }
+    .call-to-action {
+        bottom: 15px;
+        @include device-size(tablet) {
+           bottom: 45px;
+           position: relative;
+        }
+        @include device-size(mobile) {
+            bottom: 20px;
+            position: relative;
+            .field--name-field-taco-links .field-collection-item-field-taco-links .field-item {
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+    }
+}
+.front .pane-taco-pane .call-to-action {
+      bottom: 10px;
+      left: 5px;
+}
+
+@include device-size(tablet) {
+    .front .pane-taco-pane .call-to-action {
+        bottom: 0;
+        left: 0;
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+}
+
+
+
+.pane-taco-pane.horizontal {
+    .field--name-field-taco-link-call-to-action   {
+        position: static;
+        @include device-size(tablet) {
+           bottom: 10px;
+           position: absolute;
+        }  
+        @include device-size(mobile) {
+           position: relative;
+        }         
+    }
+
+    .field--name-field-taco-links {
+        width: 100%;
+    }
+    
+  
+    @include device-size(mobile) {
+        .field.field--name-field-taco-image.field--type-image.field--label-hidden {
+            //max-height: 200px;
+            //overflow: hidden;
+        }
+    } 
+
+}
+
+.jdifference-6.pane-taco-pane.horizontal .content-col {
+    width: 80%;
+    @include device-size(tablet) {
+        height: 150px;
+    }    
+    @include device-size(mobile) {
+        height: inherit;
+    }
+}
+
+
+.pane-bean-baby-massage-guide {
+    ul {
+        padding: 0;
+        list-style-type: none;
+    }
+}

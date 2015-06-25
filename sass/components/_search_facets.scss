@@ -1,0 +1,194 @@
+.page-search {
+    .title-row .pane-title {
+        display: block;
+    }
+}
+
+.product-search-filters {
+    .dropdown-toggle{
+        display:none;
+        @include device-size(mobile) {
+            display: block;    
+        }
+    }
+}
+
+.pane-site-search-facets {
+    display:block;
+    overflow:hidden;
+    height: auto;
+    padding-bottom: 0px;
+    border-top: 0px;
+    background-color: #FFF;
+    .pane-title h2 {
+        background-color: transparent;
+        padding-bottom: 5px;
+    }   
+    .pane-title h2:after {
+        display: none;
+    }
+
+    .element-invisible {
+        width: 1px;
+    }    
+}
+
+.pane-apachesolr-result {
+
+    .view-mode-search_result.node--search-result.node--product--search-result {
+        padding-bottom: 20px;
+    }    
+}
+
+#mini-panel-site_search_facets {
+
+
+    .pane-block {
+        margin-bottom: 0px;        
+        ul {
+            display: block;
+            li {
+                margin-left: 20px;
+                width: auto;
+            }
+            li:last-child {
+                padding-bottom: 10px;
+            }
+            input[type="checkbox"] {
+                width: auto;
+                float: left;
+            }
+            a, .active-text {
+                float: left;
+                width: auto;
+                background-color: transparent;
+                border: 0px;
+                padding: 0px;
+                @include font-size(11,20);
+                
+                color: $grey_copy;
+            }
+            .active-text {
+                color: #032e67;
+                @include google_sans_font(bold);
+            }
+        }    
+    }
+    .pane-title {
+        background: none repeat scroll 0 0 #e3f4f8;
+        border-bottom: 1px solid #cce4f3;
+        margin-bottom: 0;
+        display: block;
+        h2 {
+            color: #0079c1;
+            @include google_sans_font(bold);
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            text-transform: uppercase;
+            padding-top: 10px;
+            padding-left: 10px;
+            margin-top: 0px;
+            @include device-size(mobile) {
+                margin-top: 7px;
+                padding-top: 0px;
+                padding-left: 0px;                
+            }
+        }
+
+        &.ui-accordion-header {
+            padding-bottom: 5px;
+            padding-bottom: 10px;
+        }
+        &#ui-accordion-1-header-0 {
+            border-top: 1px solid #e0e0e0;          
+            border-bottom: 1px solid #e0e0e0;
+            @include border-radius(10px 10px 0px 0px);
+        }
+        &#ui-accordion-1-header-1 {
+            border-top: none;
+            @include border-radius(0px 0px 0px 0px);
+        }
+        &#ui-accordion-1-header-2 {
+            border-bottom: 1px solid #e0e0e0;
+        }        
+    }
+
+    .pane-facetapi-cyys7k44xazlkkrnt2g02scifxkmkm05  {  // First Facet
+                                                        .pane-title {
+                                                            border-top: 1px solid #e0e0e0;
+                                                            border-left: 1px solid #e0e0e0;
+                                                            border-right: 1px solid #e0e0e0;
+                                                            @include border-radius(0px 0px 0px 0px);
+                                                        }
+                                                        ul { 
+                                                            border-left: 1px solid #e0e0e0;
+                                                            border-right: 1px solid #e0e0e0;
+                                                            margin: 0;
+                                                            padding-top: 10px;
+                                                        }
+    }
+    .pane-facetapi-jfhoidey41ogbzslfhtmzdhweolzq6vd {   // Second Facet
+                                                        //margin-top: -7px;
+                                                        @include device-size(mobile) {
+                                                            margin-top: 0px;
+                                                        }
+                                                        .pane-title, ul { 
+                                                            border-left: 1px solid #e0e0e0;
+                                                            border-right: 1px solid #e0e0e0;
+                                                        }
+                                                        ul {
+                                                            margin: 0;
+                                                            padding-top: 10px;
+                                                            padding-bottom: 10px;
+                                                        }
+    }
+    .pane-facetapi-lexk6p3sdkplbgbybnl4mg73mppcuh48 {  //  Third Facet
+                                                       //margin-top: -7px;
+                                                       @include device-size(mobile) {
+                                                           margin-top: 0px;
+                                                       }        
+                                                       .pane-title, ul {
+                                                           border-left: 1px solid #e0e0e0;
+                                                           border-right: 1px solid #e0e0e0;            
+                                                       }
+                                                       ul { 
+                                                           margin: 0; 
+                                                           padding-top: 10px;
+                                                           border-bottom: 1px solid #e0e0e0;
+                                                           @include border-radius(0px 0px 10px 10px);
+                                                       }
+    }       
+
+
+}
+
+@include device-size(mobile) {
+    #mini-panel-site_search_facets {
+        padding-bottom: 0px;
+
+
+
+
+        .ui-accordion .ui-accordion-header {
+            margin-top: 0px;
+        }
+        .ui-accordion .ui-accordion-header .ui-accordion-header-icon {	  
+            left: auto;
+            right: 1em;	
+            top: 55%;
+        }
+        .ui-state-default .ui-icon {
+            @include retina_sprite("plus");			
+        }
+        .ui-state-active .ui-icon {
+            @include retina_sprite("less");	
+        }  
+
+        .ui-corner-all, .ui-corner-top, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+            @include border-radius(0px 0px 0px 0px);
+        }
+    }
+
+
+
+}

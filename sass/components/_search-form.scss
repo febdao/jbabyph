@@ -1,0 +1,170 @@
+html.js .header-bottom  .form-autocomplete {
+    background-image: none;
+}
+html.js #apachesolr-panels-search-form  .form-autocomplete {
+    background-image: none;
+}
+
+
+.header-bottom {
+  
+    // search block with easylink
+    .block--panels-mini-easylink-and-search {
+
+      .easylink,
+      .search {
+          display: inline-block;
+          vertical-align: top;
+          padding-top: 0;
+      }
+      .search {
+        width: 350px;
+      }
+      @include device-size(tablet) {
+        .search {
+          padding-top: 20px;
+          width: 100%;
+          display: none;
+        }
+        &.active-search {
+          .search {
+            display: block;
+          }
+        }
+      }
+      .easylink {
+          @include device-size(tablet) {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 62px;
+            margin: 0;
+            padding: 10px 0 0;
+          }
+          @include device-size(mobile) {
+            right: 46px;
+          }
+          @media (max-width:360px) {
+            display: none;
+          }
+          p {
+              padding: 0;
+              margin: 0;
+
+              a {
+                  text-align: right;
+                  padding: 0px 10px;
+                  display: block;
+                  margin: 8px 10px;
+                  font-weight: bold;
+                  border-right: 1px solid #e1e0f0;
+              }
+          }
+      }
+    }
+
+
+    .block--apachesolr-panels form, .pane-apachesolr-form form {
+        border: 0px solid $footerbk_border;
+
+        @include border-radius(20px 0px 0 20px);
+        height: 32px;
+    }
+    .block--apachesolr-panels .form-type-textfield, .pane-apachesolr-form .form-type-textfield {
+        height: 32px;
+    }	
+    .block--apachesolr-panels .form-type-textfield input, .pane-apachesolr-form .form-type-textfield input {
+        background-color: $searchBackground;
+        color: #b5b5b5;
+        height: 32px;
+        line-height: 32px;
+        @include box-shadow(inset 1px 1px 0px 1px rgba(0,0,0,.2));
+        @include border-radius(20px 0px 0 20px);        
+    }
+
+    .form-actions{
+        input[type="submit"]{
+            height:32px;
+        }
+    }  
+
+    .block--apachesolr-panels .form-actions input[type="submit"], 
+    .pane-apachesolr-form .form-actions input[type="submit"] {
+        background-color: $searchBackground;
+        @include box-shadow(inset -1px 1px 0px 1px rgba(0,0,0,.2));
+        @include border-radius(0px 20px 20px 0px);  
+        height: 32px;
+    }
+
+
+    // override the icons
+    #apachesolr-panels-search-block{
+        &:hover,
+            &:focus,
+            &.hovered{
+            input[type="submit"]{
+                @include retina-sprite(search-icon-active-custom);
+                height: 32px;
+                background-color: $searchBackground;   
+
+
+                &:hover,&:active{
+                    @include retina-sprite(search-icon-active-custom);
+                    height: 32px;
+                    input[type="submit"]{
+                        height: 32px;
+                        background-color: $searchBackground;   
+                    }
+                }
+            }
+        }
+    }
+    .form-actions{
+        input[type="submit"]{
+            @include retina-sprite(search-icon-custom);  
+            background-color: transparent;    
+            filter: none;   // Overriding this for IE 9 since its picking it up.
+            &:hover,
+                &:active{
+                @include retina-sprite(search-icon-active-white-custom);   
+            }
+        }
+    }
+
+    .block--apachesolr-panels .form-actions input[type="submit"]:hover, 
+        .pane-apachesolr-form .form-actions input[type="submit"]:hover,
+        .block--apachesolr-panels #apachesolr-panels-search-block:hover input[type="submit"]:hover,
+        .block--apachesolr-panels .form-actions input[type="submit"]:active, 
+        .pane-apachesolr-form .form-actions input[type="submit"]:active {
+        background-color: $searchBackground;   
+        height: 32px;
+    }
+
+    @include device-size(tablet) {
+        .block--apachesolr-panels { 
+            background-color: transparent;
+            padding: 0px;
+            padding: 0 0 0 15%;
+        }
+    }	
+}	
+
+.page-search {
+    .content-row {
+        .pane-apachesolr-form form {
+            margin-right: 5%;
+            width: 90%;
+        }
+        .pane-apachesolr-form .form-actions input[type="submit"] {
+            @include retina-sprite(search-blue-icon);
+            background-color: #FFF;
+        }
+        .pane-apachesolr-form .form-type-textfield input {
+            background-color: #FFF;
+        }
+        .pane-apachesolr-form form {
+            border: 1px solid #dddddd;
+            @include border-radius(1rem);
+        }
+    }
+}

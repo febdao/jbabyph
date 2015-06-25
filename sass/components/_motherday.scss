@@ -1,0 +1,625 @@
+$mday-padding: 5%;
+$mday-txt: #333333;
+
+@mixin omne_font($weight, $style: normal) {
+
+
+    font-family: 'omnesregular', sans-serif;
+
+    @if ($weight == light) {
+        font-family: 'omneslight', sans-serif;
+        $weight: 300;
+    }
+    @if ($weight == normal) or ($weight == regular) {
+        font-family: 'omnesregular', sans-serif;      
+        $weight: 400;
+    }
+    @if ($weight == semibold) {
+        font-family: 'omnessemibold', sans-serif;    
+        $weight: 700;
+    }    
+    @if ($weight == bold) {
+        font-family: 'omnesbold', sans-serif;    
+        $weight: 700;
+    }
+
+    // Translate Style
+    @if $style == normal {
+        $style: normal;
+    }
+    @else if $style == italic {
+        $style: italic;
+    }
+
+    font-style:  $style;
+    font-weight: $weight;
+}
+
+.section-mothers-day-gift-for-you, .section-fathers-day-gift-for-you {
+
+    .main-row, .content-row .pane-node-body, .bottom-row, .page .section-inner-wrapper p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .breadcrumb-row .section-inner-wrapper{
+        background-color: transparent;
+    }
+    .breadcrumb-row {
+        z-index: 20;
+    } 
+    .breadcrumb span, .breadcrumb a {
+        color: #FFFFFF;
+    }  
+    .breadcrumb {
+        padding-left: 20px;
+    }
+
+    .top-row {
+        margin-top: -41px;
+        position: relative;
+        @include device-size(mobile) {	
+            margin-top: 0;
+        }        
+    }
+    p sup {
+        top: -0.5em !important;
+        font-size: 75%;    
+    }
+
+    .video-block .field-item {
+        margin-bottom: 0;
+        h2.element-invisible {
+            margin-bottom: 0;  
+        }
+    }
+
+    .pane-mothers-day-panel-1-overlay, .pane-fathers-day-panel-1-overlay {
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        //height: 100%;
+        //OLD TEXT
+        //<div class="mday-header"><h1>This Mother's Day,<br>Celebrate Your Touch<h1></div>
+        //<div class="mday-logo"><img src="/sites/jbaby_us/themes/jbaby_us/debug/images/mday/johnsonsmmlogo.png" alt="Johnson's Logo" /></div>
+        .mday-header {
+            text-align: center;
+            h1 {
+                @include google_lato_font(light);
+                @include font-resize-jbaby(150,150);  
+                color: #FFF;
+                text-align: center;
+                @include device-size(tablet) { 
+                    @include font-resize-jbaby(80,80);
+                }                
+                @include device-size(mobile) { 
+                    @include font-resize-jbaby(50,50);
+                }
+            }
+            padding-top: 2%;
+            @include device-size(tablet) {	
+                padding-top: 5%;
+            }            
+            @include device-size(mobile) {	
+                padding-top: 2%;
+            }                        
+        }
+
+    }
+    .main-row {
+        //margin-top: -10px;
+
+        @include device-size(tablet) {	
+            margin-top: -7px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .pane-mothers-day-panel-1-copy  {
+        padding: $mday-padding;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        position: relative;
+
+        .mday-logo {
+            position: absolute;
+            top: -125px;
+            padding-left: 10px;
+            display: block;
+            width: 156px;
+            @include device-size(tablet) {	
+                top: -100px;
+            }
+            @include device-size(mobile) {	
+                top: -60px;
+                img {
+                    width: 100px;
+                    max-width: 100px;
+                }
+            }
+        }
+
+        .moment-quote {
+            @include google_lato_font(bold);
+            @include font-resize-jbaby(56,59);
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            @include device-size(mobile) { 
+                @include font-resize-jbaby(34,47);
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }            
+        }
+        .love-you-quote {
+            img {
+                vertical-align: middle;
+                @include device-size(mobile) {	
+                    max-width: 100px;
+                }                
+            }
+        }
+        .mobile-share-quote {
+            display: none;
+            @include font-resize-jbaby(30,55);
+            @include google_lato_font(light);
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 0px;                
+            margin-bottom: 0px;            
+            @include device-size(mobile) { 
+                display: block;
+            }            
+        }
+        .half-share-quote {
+            @include device-size(mobile) { 
+                display: none;
+            } 
+        }
+        .share-quote {
+            @include google_lato_font(light);
+            @include font-resize-jbaby(48,53);         
+            color: #FFFFFF;
+            text-align: left;
+            margin-top: 0px;             
+        }
+        .share-tag {
+            @include google_lato_font(bold);
+            color: #FFFFFF;
+        }
+        //Awkard stage on small tablets where the two column looks bad, so drop to one column
+        @media (min-width: 640px) and (max-width: 748px)	 { 
+            .half {
+                width: 100%;
+            }
+            .half-share-quote {
+                display: none;                
+            }
+            .mobile-share-quote {
+                display: block;
+            }
+        }
+
+        background-color: #6d6d6d;
+        .social-icons {
+            padding-top: 0;
+            text-align: center;
+            a{
+                margin-right: 8px;
+                margin-left: 7px;
+            }
+            @include device-size(mobile) {	
+                padding-bottom: 0px;
+                a{
+                    margin-right: 8px;
+                    margin-left: 7px;
+                }
+            }             
+        }
+        .facebook {
+            background: image-url('mday/facebook.png') no-repeat scroll center bottom / contain rgba(0, 0, 0, 0);
+            height: 45px;
+            width: 45px;
+            display: inline-block;     
+            margin-top: 10px;
+            vertical-align: top;        
+
+        }
+        .instagram {
+            background: image-url('mday/instagram.png') no-repeat scroll center bottom / contain rgba(0, 0, 0, 0);
+            height: 67px;
+            width: 67px;
+            display: inline-block;            
+        }  
+        .twitter {
+            background: image-url('mday/twitter.png') no-repeat scroll center bottom / contain rgba(0, 0, 0, 0);
+            height: 45px;
+            width: 45px;
+            display: inline-block;            
+            margin-top: 10px;
+            vertical-align: top;        
+
+        }        
+        .youtube {
+            background: image-url('mday/youtube.png') no-repeat scroll center bottom / contain rgba(0, 0, 0, 0);
+            height: 45px;
+            width: 45px;
+            display: inline-block;            
+            margin-top: 10px;
+            vertical-align: top;        
+
+        }        
+        .google {
+            background: image-url('mday/google.png') no-repeat scroll center bottom / contain rgba(0, 0, 0, 0);
+            height: 45px;
+            width: 45px;
+            display: inline-block;            
+            margin-top: 10px;
+            vertical-align: top;        
+
+        }        
+        @include device-size(mobile) { 
+            .social-icons {
+                a{
+                    margin-right: 4px;
+                    margin-left: 4px;
+                }
+            }
+            .facebook, .twitter, .youtube, .google {       
+                height: 40px;
+                width: 40px;
+            }
+            .instagram {       
+                height: 55px;
+                width: 55px;
+            }            
+        } 
+
+    }
+
+    .mday-cta a {
+
+        @extend .basic-button;
+
+        background-color: #FFF !important;
+        color: $primaryColor !important;
+        width: auto;
+        position: relative;
+        display: inline-block !important;
+        @include google_lato_font(regular);
+        @include font-resize-jbaby(38);                 
+        filter: none;   // Overriding this for IE 9 since its picking it up.        
+        @include prefix(border-radius, 3rem);
+        padding: 7px 45px 7px 15px;
+
+        &:after {
+            @include bi-direction-style(content, " ", content, " ");
+            @include bi-direction-style(right, 0px, left, 0px);	
+            @include retina_sprite("arrow-right-blue");
+            display: inline-block;
+            width: 13px;
+            height: 21px;
+            top: 0;
+            bottom: 0;
+            margin: auto 30px auto auto;
+            position: absolute;
+        }
+
+
+    }
+
+
+    @include device-size(mobile) {	
+        .bottom-row {
+            background-image: image-url('mday/panel2_mobile.jpg');
+            background-color: #c7d7e3;
+            background-size: 100% auto; 
+            background-repeat: no-repeat;
+        }
+    }
+    //Awkard stage on small tablets where the full image looks bad so switch to mobile
+    @media (min-width: 640px) and (max-width: 900px)	 {    
+        .bottom-row {
+            background-image: image-url('mday/panel2_mobile.jpg');
+            background-color: #c7d7e3;
+            background-size: 100% auto; 
+            background-repeat: no-repeat;
+        }          
+    }
+
+    .pane-mothers-day-panel-2, .pane-fathers-day-panel-2 {
+        background-image: image-url('mday/panel2.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat;         
+        padding: 4%;
+        padding-top: 3%;
+        @media (min-width: 640px) and (max-width: 900px)	 {            
+            background-image: none;
+            padding-top: 20px;            
+        }    
+        @include device-size(mobile) {	
+            background-image: none;
+            padding-top: 20px;
+        }
+        .giftcard-header {
+            text-align: center;
+        }
+        #mini-panel-mothers_day_panel_2 .row.details, #mini-panel-fathers_day_panel_2 .row.details{
+            width: 60%;
+            @include device-size(mobile) {	
+                width: 100%;
+                .one-third {
+                    width: 30%;
+                }
+                .two-thirds {
+                    width: 68%;
+                }
+            }
+        }
+        h2 {
+            @include omne_font(semibold);
+            @include font-resize-jbaby(68, 68);
+            color: $primaryColor;
+            @include device-size(mobile) {	
+                @include font-resize-jbaby(48, 48);                
+            } 
+        }
+        #mini-panel-mothers_day_panel_2 h2, #mini-panel-fathers_day_panel_2 h2 {
+            padding-top: 1em;
+            @include device-size(mobile) {	
+                width: 65%;
+            } 
+        }        
+        //Second h2 "and treat yourself at home"
+        #mini-panel-mothers_day_panel_2 .pane-3 h2, #mini-panel-fathers_day_panel_2 .pane-3 h2 { 
+            padding-top: 0;
+            @include device-size(mobile) {	
+                width: 100%;
+            }             
+        }
+        h3 {
+            @include google_lato_font(bold);
+            @include font-resize-jbaby(60, 60);        
+            margin: 0;
+            @include device-size(mobile) { 
+                @include font-resize-jbaby(36,40);
+            } 
+            .egiftcare {
+                @include google_lato_font(bold);
+                @include font-resize-jbaby(46);
+                @include device-size(mobile) { 
+                    display: inline;
+                    @include font-resize-jbaby(36,40);
+                }                
+            }            
+        }
+        p {
+
+            @include google_lato_font(regular);
+            @include font-resize-jbaby(36);            
+            color: $mday-txt;
+            margin-top: 0;
+
+            @include device-size(mobile) { 
+                width: 100%;
+                @include font-resize-jbaby(24);
+            }
+        }
+        hr {
+            padding-left: $mday-padding;
+            margin-top: 3%;
+            border: 0; 
+            height: 0; 
+            border-top: 1px solid rgba(0, 0, 0, 0.1); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-right: $mday-padding;
+
+        }        
+        .giftcard-details {
+            @include google_lato_font(regular);
+            @include font-resize-jbaby(28); 
+            color: $mday-txt;
+            width: 70%;
+
+            @include device-size(mobile) { 
+                width: 100%;
+                @include font-resize-jbaby(18);
+            }
+        }
+        .mday-cta {
+            text-align: left;
+            padding-bottom: 2%;
+
+            a {
+                background-color: $JJPink !important;
+                color: #FFF !important;
+                padding: 18px 90px 18px 15px;
+
+
+                &:after {
+                    @include bi-direction-style(content, " ", content, " ");
+                    @include bi-direction-style(right, 0px, left, 0px);	
+                    @include retina_sprite("arrow-right-white");
+                }
+            }
+            @include device-size(mobile) { 
+                a {
+                    text-align: left;
+
+                    padding: 18px 50px 18px 15px;
+                    @include font-resize-jbaby(32);                 
+                    &:after {
+                        margin: auto 20px auto auto;
+                    }
+                }
+            }              
+        }
+    }
+    .pane-mothers-day-panel-3 {
+
+        padding-top: $mday-padding;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+
+        h2 {
+            @include omne_font(semibold);
+            @include font-resize-jbaby(68);
+            color: $primaryColor;            
+            margin-top: 0;
+            margin-bottom: 10px;
+            @include device-size(mobile) {	
+                @include font-resize-jbaby(43);                
+            }             
+        }
+        h4 {
+            @include google_lato_font(bold);
+            @include font-resize-jbaby(40);            
+            color: $mday-txt;
+            margin-top: 0px;
+            @include device-size(mobile) {	
+                @include font-resize-jbaby(24);                
+            }            
+        }
+        ul {
+            padding-left: 20px;
+            li {
+                @include google_lato_font(regular);
+                @include font-resize-jbaby(40,52);            
+                padding-bottom: .5em;
+                color: $mday-txt;
+                a {
+                    color: $primaryColor;  
+                }
+                @include device-size(mobile) {	
+                    @include font-resize-jbaby(24);                
+                }
+            }
+        }
+        .mday-products {
+            text-align: center;
+            padding-top: 5%;
+            padding-left: 5%;
+            padding-right: 5%;            
+            @include device-size(mobile) {	
+                padding-top: 30px;               
+                padding-left: 0;
+                padding-right: 0;                
+            }
+
+        }
+        //Awkard stage on small tablets where the two column looks bad, so drop to one column
+        @media (min-width: 640px) and (max-width: 748px)	 {    
+            .half {
+                width: 100%;
+            }
+            .mday-products img{
+                max-width: 400px;
+            }            
+        }
+    }
+    .pane-mothers-day-panel-4 {
+        background-image: image-url('mday/panel4.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat;          
+        padding: $mday-padding;
+        padding-bottom: 20%;
+
+
+        h2 {
+            @include omne_font(light);
+            @include font-resize-jbaby(150, 150);
+            color: $mday-txt;
+            text-align: center;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            sup {
+                top: -0.2em !important;
+            }
+        }
+        h3 {
+            @include google_lato_font(regular);
+            @include font-resize-jbaby(60);             
+            color: $mday-txt;
+            text-align: center;
+            margin-top: 0;
+        }
+        .mday-cta {
+            text-align: center;
+            a {
+                padding: 18px 80px 18px 50px; 
+            }
+        }
+        @include device-size(mobile) {	
+            background-image: none;
+            background-color: #6d6d6d;
+            padding-bottom: 5%;
+            h2{
+                background-image: image-url('mday/panel4_mobile.jpg');
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 200px;
+                padding-top: 75px;
+                margin-left: -5.5%;
+                margin-right: -5.5%; 
+                margin-top: -5.5%;  
+                @include font-resize-jbaby(58);
+            }
+            h3 {
+                width: 90%;
+                margin: 0 auto;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                color: #FFFFFF;
+                @include font-resize-jbaby(24);
+                @include device-size(mobile) {	
+                    padding-top: 10px;    
+                    padding-bottom: 10px;
+                }
+            } 
+            .mday-cta {
+                a {
+                    @include font-resize-jbaby(32);   
+                    padding: 9px 40px 9px 10px; 
+                    @include device-size(mobile) {	
+                        text-align: left;
+                        padding: 9px 40px 9px 20px;
+                    }
+                }
+            }
+
+        }
+
+    }   
+    .pane-mothers-day-panel-5-back-to-top {
+        background-color: #dde8f0;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        .mday-back-to-top {
+            text-align: center;
+            @include google_lato_font(bold);
+            @include font-resize-jbaby(60);
+            a {
+                color: $primaryColor;  
+                &:after {
+                    content: "\e617";
+                    font-family:'icomoon';
+                    @include bi-direction-style(margin-left, $outerPadding, margin-right, $outerPadding);
+                }
+            }
+            @include device-size(mobile) {	
+                @include font-resize-jbaby(36);
+            }
+        }        
+
+    }  
+
+    #footer .top-link {
+        display: none;
+    }
+
+
+}

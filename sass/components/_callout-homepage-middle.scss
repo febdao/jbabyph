@@ -1,0 +1,28 @@
+/// ==============================
+// Callout: Products
+/// ==============================
+
+.front .home-taco-middle .bean-taco{
+
+    .field--name-field-taco-links{
+        float: left;
+    }
+    .image-col {
+        //padding-top: 10px; 
+    }
+    .content-col {
+
+        h2{
+
+            color: $JJPurple;
+            @include google_lato_font(light);
+            @include font-size(24,25); 
+
+        }
+    }
+
+    .call-to-action .field--name-field-taco-links .field-collection-view {
+        margin: 0;
+    }
+
+}

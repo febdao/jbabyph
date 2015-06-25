@@ -1,0 +1,13 @@
+@include device-size(tablet) {
+
+    .page-node-66 .pane-block.half{  // On this page let the width go to 50% so setting max high
+        max-width: 500px;
+    }
+}
+
+.section-preparing-baby {
+    .pane-block.half .bean-taco {
+        min-height: 225px; // will need to increase once images are added.
+    }
+    // Will probably have to set this for tablet/mobile to get it same heights.
+}

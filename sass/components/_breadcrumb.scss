@@ -1,0 +1,41 @@
+.breadcrumb-row {
+    padding-top: 22px;
+    margin-bottom: 5px;
+}
+
+.breadcrumb {
+    margin: 0;
+    @include google_sans_font(bold);
+    @include font-resize-jbaby(30, 30);
+    a {
+        @include google_sans_font(bold);
+        @include font-resize-jbaby(30, 30);
+    }
+    sup {
+        top: -0.3em;
+    }
+}
+
+.breadcrumb span, .breadcrumb a {
+    display: inline;
+    letter-spacing: inherit;
+}
+
+
+.breadcrumb .current-page {
+    color: #000;
+    @include google_sans_font(bold);
+    @include font-resize-jbaby(30, 30);
+}
+
+
+.breadcrumb span.breadcrumb-separator {
+    color: #000;
+    @include font-resize-jbaby(30, 30);
+}
+
+@include device-size(tablet) {
+    .breadcrumb-row {
+        display: none;
+    }
+}

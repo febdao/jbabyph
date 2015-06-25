@@ -1,0 +1,26 @@
+
+.front .home-taco-left .bean-taco{
+
+    .field--name-field-taco-links{
+        float: left;
+    }
+
+    h2 {
+        color: $JJPink;
+        @include google_lato_font(light);
+        @include font-size(24,25); 
+    }
+    h2.black {
+        color: #000000;
+        @include google_lato_font(bold);
+        font-weight: 500;
+        @include font-size(24,25); 
+        margin-bottom: 5px;
+    }    
+
+    .call-to-action .field--name-field-taco-links .field-collection-view {
+        margin: 0;
+    }    
+
+}
+

@@ -1,0 +1,31 @@
+.title-row {
+    .pane-node-janrain-share-settings + .pane-node-title{
+        width:100%;
+    }
+}
+
+@include device-size(tablet) {
+    .title-row {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+    .node-type-product {
+        .title-row {
+            margin-top: 10px; 
+        }
+    }
+}
+
+@include device-size(tablet) {
+    .title-row {
+        margin-top: 0px;
+    }
+}
+
+.page-search .title-row .pane-janrain-janrain-page-share {
+    margin-top: -20px;
+}
+
+.page-node-151 .title-row .pane-node-janrain-share-settings {
+    top: 20px
+}

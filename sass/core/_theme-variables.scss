@@ -1,0 +1,322 @@
+/////////////////////////////////////
+// GWS Sub Theme Main Color Options //
+/////////////////////////////////////
+
+// Prominent
+
+// Primary Content Foreground Color
+$primaryColor: #0079c1;
+
+// Secondary Content Foreground Color
+$secondaryForegroundColor: #454545;
+
+// Primary Content Background Color
+$primaryBackgroundColor: #fff;
+
+////////////////////////////////////////
+// GWS Sub Theme Content Color Options //
+////////////////////////////////////////
+
+// Site Background Color
+$siteBackgroundColor: #fff;
+$siteBackgroundColor_front: #f1ecdf;
+
+// Site Content Container Background Color
+$siteContentBackground: #fff;
+
+
+//////////////////////////////////////////////////
+// GWS Sub Theme Primary Interactive Color Options //
+/////////////////////////////////////////////////
+
+// Primary Interactive Foreground Color
+$primaryInteractiveForegroundColor: #fff;
+
+// Primary Interactive Color (Default)
+$primaryInteractiveColor: #0c70b4;
+
+// Primary Interactive Color (Hover/Focus)
+$primaryInteractiveHoverColor: darken($primaryInteractiveColor, 8);
+
+// Primary Interactive Color (Active)
+$primaryInteractiveActiveColor: darken($primaryInteractiveColor, 16);
+
+// Primary Interactive Color (Disabled)
+$primaryInteractiveDisabledColor: desaturate(lighten($primaryInteractiveColor, 16), 70);
+
+
+////////////////////////////////////////////////////
+// GWS Sub Theme Secondary Interactive Color Options //
+////////////////////////////////////////////////////
+
+// Secondary Interactive Color (Default)
+$secondaryInteractiveColor: #666666;
+
+// Secondary Interactive Color (Hover/Focus)
+$secondaryInteractiveHoverColor: darken($secondaryInteractiveColor, 8);
+
+// Secondary Interactive Color (Active)
+$secondaryInteractiveActiveColor: darken($secondaryInteractiveColor, 16);
+
+// Primary Interactive Color (Disabled)
+$secondaryInteractiveDisabledColor: desaturate(lighten($secondaryInteractiveColor, 16), 70);
+
+
+//////////////////////////////////////////
+// GWS Sub Theme Container Color Options //
+/////////////////////////////////////////
+
+// Container Background Color
+$containerBackgroundColor: #edf8fc;
+
+// Container Background Color (Hover/Focus)
+$containerBackgroundHoverColor: darken($containerBackgroundColor, 8);
+
+// Container Background Color (Active)
+$containerBackgroundActiveColor: darken($containerBackgroundColor, 16);
+
+// Container Background Color (Disabled)
+$containerBackgroundDisabledColor: desaturate(lighten($containerBackgroundColor, 16), 70);
+
+
+/////////////////////////////////////////////////
+// GWS Sub Theme Typography Font Family Options //
+/////////////////////////////////////////////////
+
+// Primary Font Family
+$primaryFontFamily: arial, helvetica, sans-serif;
+
+// Secondary Font Family
+$secondaryFontFamily: arial, helvetica, sans-serif;
+
+
+///////////////////////////////////////////////
+// GWS Sub Theme Typography Font Size Options //
+///////////////////////////////////////////////
+
+// Base Font Size (value is in pixels, will be converted through the use of the font-size mixin)
+$baseFontSize: 13;
+
+// Large Font Size (value is in pixels, will be converted through the use of the font-size mixin)
+$largeFontSize: 18;
+
+// Extra Large Font Size (value is in pixels, will be converted through the use of the font-size mixin)
+$extraLargeFontSize: 24;
+
+// Extra Extra Large Font Size (value is in pixels, will be converted through the use of the font-size mixin)
+$extraExtraLargeFontSize: 43;
+
+// Small Font Size (value is in pixels, will be converted through the use of the font-size mixin)
+$smallFontSize: 14;
+
+// Extra Small Font Size (value is in pixels, will be converted through the use of the font-size mixin)
+$extraSmallFontSize: 12;
+
+// Extra Extra Small Font Size (value is in pixels, will be converted through the use of the font-size mixin)
+$extraExtraSmallFontSize: 10;
+
+
+/////////////////////////////////////////////////
+// GWS Sub Theme Typography Line Height Options //
+/////////////////////////////////////////////////
+
+// Default Line Height
+$lineHeight: 1.2;
+
+// Line Height 100%
+$lineHeight100: 1;
+
+// Line Height 105%
+$lineHeight105: 1.05;
+
+// Line Height 110%
+$lineHeight110: 1.1;
+
+// Line Height 115%
+$lineHeight115: 1.15;
+
+// Line Height 130%
+$lineHeight130: 1.3;
+
+// Line Height 140%
+$lineHeight140: 1.4;
+
+// Line Height 150%
+$lineHeight150: 1.5;
+
+// Line Height 200%
+$lineHeight200: 2;
+
+
+//////////////////////////////////////////////
+// GWS Sub Theme General Typography Options //
+/////////////////////////////////////////////
+
+// Default Letter Spacing
+$letterSpacing: 0.01em;
+
+// Default Text Align
+$textAlign: left;
+
+// Default Text Indent
+$textIndent: 0;
+
+// Default White Space
+$whiteSpace: normal;
+
+// Emphasis Font Weight
+$fontWeight: 500;
+
+// Emphasis Font Style
+$emphasisFontStyle: italic;
+
+// Emphasis Font Weight
+$emphasisFontWeight: normal;
+
+// Strong Emphasis Font Style
+$strongEmphasisFontStyle: normal;
+
+// Strong Emphasis Font Weight
+$strongEmphasisFontWeight: 700;
+
+
+//////////////////////////////////
+// GWS Sub Theme Button Options //
+/////////////////////////////////
+
+// Default Button Padding
+$buttonPadding: 0.3125rem;
+
+// Default Border Width
+$buttonBorder: 1px;
+
+// Default Border Color
+$buttonBorderColor: $containerBackgroundColor;
+
+// Default Border Style
+$buttonBorderStyle: solid;
+
+
+////////////////////////////////////
+// GWS Sub Theme Bi Direction Style //
+///////////////////////////////////
+
+//@option ltr = left to right orientation
+//@option rtl = right to left orientation
+//@option both = supports both left to right and right to left depending on the html's dir attribute outputted by Drupal
+
+//Special note on the both option, the css output will be html[dir=ltr] or  html[dir=rtl]  which will make it more difficult to override style on a sub theme.
+
+//Platform recommendation is to use the @include bi-directional-style mixin in the sub theme, this will ensure the styles are overridden
+
+$language-direction-support: both;
+
+
+///////////////////////
+// Structural Variables //
+//////////////////////
+
+// Update the header-row styles //
+// @option left = logo to the left
+// @option center = logo in the center
+$headerRow: left;
+
+
+// Update the navigation-row styles
+// @option buttons = links are buttons, have horizontal margins between them
+// @option row = links are buttons, do not have horizontal margins between them
+// @option text = links are just text
+$navigationRow: buttons;
+
+// @option side = main menu is either left aligned, right aligned, or both depending on the $language-direction-support variable
+// @option center = main menu is centered
+$navigationRowAlignment: side;
+
+
+// Update the footer-row styles
+// @option simple = simple layout
+$footerRow: simple;
+
+///////////////////////
+// Johnson's Baby Custom //
+//////////////////////
+
+
+
+$HeroTitles: #333333;
+
+$JJPink: #f16477;
+$JJPurple: #9490d6;
+$complementaryColor: #f16477;
+$complementaryColorDark: darken($complementaryColor,15);
+$mainNavBackground: white;
+$mainNavBorderColor: white;
+
+$searchBackground: #f4f4f4;
+$mobileNavBackgroundDefault: #0092D6;
+$mobileNavBackgroundSecond: #35B2Df;
+
+// Light Gray color variable
+$layoutGrayColor: #f5f5f5;
+// Pink color for active products filter
+$activeFilterColor: #EEB3BD;
+$linkDefaultColor: $primaryColor;
+$linkFocusColor: $primaryColor;
+
+$footerbk: #6d6d6d;
+$footerbk_border: #a8cde0;
+$footermenu: #FFFFFF;
+$footertext: #dddddd;
+$footermenu_border: #5b5b5b;
+
+$grey_copy: #666666;
+$borderlines: #999999;
+
+// Utility menu items
+$utility-menu-items: ourpromise, thejohnsonsdifference, couponsoffers, babycenter, wheretobuy, facebook, youtube, instagram, google; // babycenter, wheretobuy;
+
+// OLD TEMPORARY VARIABLES (do no use)
+
+// Mid range color variable
+$midColor: $containerBackgroundColor;
+
+// Light range color variable
+$lightColor: #f5f5f5;
+
+// Display font variable will be used on h1-2
+$displayFont: arial, helvetica, sans-serif;
+
+// Body font variable will define h3-h6, p, a
+$bodyFont: arial, helvetica, sans-serif;
+
+
+// Body font color variable
+$bodyFontColor: #4d4d4f;
+
+// Background color used on the body
+$primaryBackgroundColor: #FFF;
+
+
+// Interior coloring
+$content_bk: #f3f3f3;
+
+$section2_bk: #fbf3bb;  // On US:  Preparing for Baby
+
+$section2_title: #cbb124;
+$section3_bk: #fde6eb;  // On US:  Caring for Baby
+
+$section3_title: #f16477;
+$section4_bk: #ceecf4;  // On US:  Bathing Baby
+
+$section4_title: #5cc7e9;
+$section5_bk: #dad9ec;  // On US:  Bedtime
+
+$section5_title: #a28fc3;
+$section6_bk: #ffe3b4;  // On US:  Diapering
+
+$section6_title: #deb16b;
+$section7_bk: #e6f2cb;  // On US:  Play & Learning
+
+$section7_title: #93b665;
+
+$background_pink: #fce6ea;

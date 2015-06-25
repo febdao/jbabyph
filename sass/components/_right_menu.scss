@@ -1,0 +1,14 @@
+
+    .content-row .pane-menu-tree > ul {
+        
+        li  {
+            display: none;  // Hide all of them
+        }
+        li.active-trail {
+            display: block; // Show the parent
+            li {
+                display: block;    // Show the children
+            }
+        }
+    }
+

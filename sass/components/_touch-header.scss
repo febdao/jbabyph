@@ -1,0 +1,167 @@
+@include device-size(tablet) { 
+    .touch-nav {
+
+        .accordion li.expanded > a:after {
+            color: #fff;
+        }
+        
+
+        .accordion > .menu {
+            a {
+                @include border-radius(0);
+                background-image: none;
+                background-color: $mobileNavBackgroundDefault;
+                color: #ffffff;
+                margin-top: 0px;
+                @include google_sans_font(light);
+                @include font-size(16,18);
+                letter-spacing: 1px;
+                text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+                padding-top: 15px;
+                padding-bottom: 15px;
+                text-transform: none;
+                border-bottom: 1px dashed lighten($mobileNavBackgroundDefault,10%);
+
+
+                &:hover,
+                    &:active,
+                    &.active-accordion,
+                    &.active-accordion:hover{
+                    background-color: lighten($mobileNavBackgroundDefault,2%);
+                }	
+            }
+            a.active {
+                background-color: $complementaryColor;
+            }
+            a.active:before {
+                display: inline-block;;
+            }
+
+            li.home a:before{
+                @include retina-sprite("home_touch");
+                content: " ";
+                display: inline-block;		
+                margin-right: 10px;
+
+            }		
+            li.babysskin a:before{
+                @include retina-sprite("skin");
+                content: " ";
+                display: inline-block;		
+                margin-right: 10px;
+            }
+            li.babyproducts {
+                a:before {
+                    @include retina-sprite("drop");
+                    content: " ";
+                    display: inline-block;		
+                    margin-right: 10px;
+                }
+                li a:before { display: none; }  // Hide icons for submenu
+            }
+            li.preparing  {
+                a:before {
+                    @include retina-sprite("balloon");
+                    content: " ";
+                    display: inline-block;		
+                    margin-right: 10px;
+                }
+                li a:before { display: none; }  // Hide icons for submenu                
+            }
+            li.caring {
+                a:before {
+                    @include retina-sprite("heart");
+                    content: " ";
+                    display: inline-block;		
+                    margin-right: 10px;
+                }
+                li a:before { display: none; }  // Hide icons for submenu                 
+            }
+            li.bathing {
+
+                a:before {
+                    @include retina-sprite("duck");
+                    content: " ";
+                    display: inline-block;		
+                    margin-right: 10px;
+                }
+                li a:before { display: none; }  // Hide icons for submenu                
+            }
+            li.bedtime {
+
+                a:before {
+                    @include retina-sprite("moon");
+                    content: " ";
+                    display: inline-block;		
+                    margin-right: 10px;
+                }
+                li a:before { display: none; }  // Hide icons for submenu                
+            }
+
+            li.diapering {
+
+                a:before {	
+                    @include retina-sprite("pin");
+                    content: " ";
+                    display: inline-block;			
+                    margin-right: 10px;
+                }
+                li a:before { display: none; }  // Hide icons for submenu                
+            }		
+            li.playlearning  {
+
+                a:before {	
+                    @include retina-sprite("bug");
+                    content: " ";
+                    display: inline-block;			
+                    margin-right: 10px;
+                }
+                li a:before { display: none; }  // Hide icons for submenu                
+            }
+
+            li.expanded {
+                ul.menu {
+                    li {
+                        display: block;
+                        a {
+                            border: none;
+                            color: #ffffff;
+                            padding-left: 50px;
+                            background-color: $mobileNavBackgroundSecond;
+                            &:hover{
+                                background-color: lighten($mobileNavBackgroundSecond,5%);
+                            }
+                        }
+                    }
+                }
+            }		
+
+            li.expanded:after {
+                display: none;
+            }	  
+
+        }
+    }
+
+    .menu-utility-menu {
+        border-top: 1px solid #dcdcdc !important;
+        border-bottom: 1px solid #dcdcdc !important;
+        li {
+            background-color: #F5F5F5 !important;
+            border-top: 1px solid white !important;
+            a {
+                color: #666666 !important;
+            }
+            a:hover {
+                color: #333333 !important;
+            }
+        }
+        li:before {
+            background-color: #dcdcdc !important;
+        }
+        li:active,  li:hover {
+            background-color: #e1e1e1;
+            border-top: 1px solid white;
+        }
+    }
+}

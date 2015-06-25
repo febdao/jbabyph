@@ -1,0 +1,49 @@
+
+.products{
+  &.grid-area {
+    width: 73%;
+    @include device-size(mobile) { width: 100%;}  
+  }
+  .grid-item{
+    &:hover {
+      background-color: transparent;
+    }      
+    .views-row {
+      padding: 0px;
+      margin-bottom: 25px;
+    }
+    h2.node__title {  
+      text-align: center;
+      line-height: 1.5rem;
+      margin-bottom: 25px;
+      a{
+        font-weight: normal;
+        @include font-size(13,15);
+        text-decoration: none;
+
+      }
+    }
+    .field--name-field-product-image {
+      min-height: 220px;
+      position: relative;
+      img {
+        position:absolute;
+        top:0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        margin:auto;
+      }	
+      margin-bottom: 25px;
+    }
+    .bv_star_rating + a{
+      float:none;
+    }    
+  }
+
+  .node.node--product.node--product-short.node--product--product-short:hover {
+    //background-color: #e6f6fa;
+  }
+}
+
+

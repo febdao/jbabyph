@@ -1,0 +1,42 @@
+// Products Grid (default?)
+
+.page-products{
+    h1 {
+        display: none;
+    }
+}
+
+.view-products-3-categories .view-content .views-row {
+    border-bottom: 1px dashed #e3e3e3;
+}
+
+.page-baby-products {
+
+    .products .grid-item {
+        padding: 5px 5px 10px;   
+        @include device-size(tablet) { width: 48%; }
+        @include device-size(mobile) { width: 100%;}           
+        h2.node__title {
+            margin-bottom: 0px;
+            text-align: center;
+            height: 95px;
+            padding-left: 5px;
+            padding-right: 5px;
+            @include device-size(tablet) {
+                height: 50px;                
+            }
+            @include device-size(mobile) {
+                height: auto; 
+                padding-left: 0px;
+                padding-right: 0px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    @include at-mobile-breakpoint{
+        .node--product-short .content {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+
+.facetapi-facetapi-checkbox-links li.leaf {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+
+.node--search-result {
+
+    .group-left {
+        width: 25%;
+        .field--name-field-product-image {
+            width: 100%;
+        }		
+    }    
+
+    .group-right {
+        float: right;
+        width: 74%;
+
+        .field--type-text-with-summary {
+            margin-left: 0px !important;
+        }
+
+        .field--name-title h3{
+            color: $primaryColor;
+            @include google_sans_font(bold);
+            @include font-size(13,13);
+            margin: 0;
+        }
+
+        .field--name-body {
+
+        }
+
+    }
+    
+
+}
+

@@ -1,0 +1,100 @@
+//Prominent
+
+@include device-size(tablet) {
+    .title-row .pane-node-janrain-share-settings, .title-row .pane-janrain-janrain-page-share {
+        display: none;
+    }
+}
+
+
+// Title styling
+.title-row{
+    .pane-node-janrain-share-settings  {
+        top: 0px;
+    }
+    div{
+        text-transform:none;
+    }
+
+    .janrain-share-text{
+        @include button(#FFF);
+        @include bi-direction-style(padding-right, 20px, padding-left, 7px);
+        @include bi-direction-style(float, right, float, left);
+        padding-left: 7px;
+        margin-bottom:0;	
+        @include google_sans_font(bold);
+        @include font-resize-jbaby(26);
+        text-transform: none;
+        @include border-radius(5px);
+        border: 1px solid #666666;
+        color: $primaryColor;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        &:before{	      
+            @include retina-sprite("arrow-share-gray");
+            width: 18px;
+            height: 11px;
+            display: inline-block;
+            content: " ";
+            margin-right: 18px;
+        }
+        &:after{
+            @include bi-direction-style(right, 11px, left, 11px);
+            color:currentcolor;
+            content: " ";
+            display:block;
+            font-family:'icomoon';
+            font-size:10px;
+            position:absolute;
+            top:16px;
+        }
+        &:hover, &:focus {
+            background-color: #ddd;        
+            color: $primaryColor;
+        }
+    }
+    .janrain-share-button{
+
+        div{
+            @include button(#FFF);
+            @include background-size(auto 100%);      
+            margin-bottom:0;
+            color: $primaryColor;
+            background-repeat:no-repeat;
+
+            clear:both;
+            display:block;
+            line-height:0;
+            margin:0;
+            overflow:hidden;
+            padding:10px 8px;
+            position:relative;
+            width:100%;
+
+        }
+
+        span{
+            display:block;
+        }
+
+        .janrain-capture-link-social{
+            @include bi-direction-style(left, 2px, right, 2px);
+            margin-top:-8px;
+            position:absolute;
+            top:50%;
+        }
+
+        .janrain-button-pad{
+            @include bi-direction-style(padding-left, 8px, padding-right, 8px);
+        }
+    }
+}
+
+//
+.janrain-share-button{
+    div{
+        @include inline-block();
+        vertical-align:middle;
+    }
+}

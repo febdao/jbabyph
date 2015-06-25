@@ -1,0 +1,53 @@
+.language-switcher-locale-url {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li{
+        display: block;
+        &.active{
+            display: none;
+        }
+
+        a{
+            display: block;
+            width: 85px;
+            height: 28px;
+            padding: 0 10px;
+
+            @include font-size(13);
+            line-height: 29px;
+            @include google_sans_font(light);
+            background-color: $primaryColor;
+            color: #FFF;
+            border-radius: 10px;
+            text-align: center;
+        }
+    }
+}
+
+
+#block-block-1 {
+    width: 85px;
+    display: inline-block;
+    margin-right: 3%;	
+}
+
+@include device-size(tablet) {  
+    #block-block-1 {
+        float: right;
+    }
+
+    .language-switcher-locale-url{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+    }
+}
+
+@media all and (max-width:25em) {  // lose it on small display devices smaller than about 280px
+    .language-switcher-locale-url {
+        display: none;
+    }
+}

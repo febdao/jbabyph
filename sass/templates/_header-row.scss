@@ -1,0 +1,114 @@
+.header-row {
+
+    .header-top {
+        margin-top: -20px;
+        position: relative;
+        min-width: 70%;
+        margin-bottom: 40px; 
+        padding: 0px 0 0px;
+    }
+
+    @include device-size(tablet) {
+        padding: 5px;
+    }
+
+
+    // Site Logo
+    .site-logo{
+        @include inline-block();
+        height:auto;
+        position:relative;
+        padding-top: 20px;
+
+
+        img{
+            min-width: 97px;
+            max-width: 154px;
+            margin-left: 35px;
+        }
+
+        @include device-size(large-desktop) {
+            min-width: 154px;
+        }
+
+        @include device-size(tablet) {
+            @include inline-block();
+            padding-top: 0px;
+
+            img {
+                width: auto;
+                width: initial;
+                height:44px;
+            }
+
+
+        }
+
+        @include device-size(mobile) {
+            width: 80%;
+            img{
+                min-width:0;
+                padding-top:5px;
+            }
+        }
+    }
+
+    nav.menu-utility-menu {
+        max-width: 100%;
+    }
+
+    nav {
+        li{
+            @include bi-direction-style(margin-right, 6px, margin-left, 6px);
+        }
+    }
+
+    .menu-utility-menu {
+
+        .menu {
+            margin: 21px 2px 0 0;
+            li{
+                border-left: 1px solid #e1e0f0;
+                &:first-child{border:none}
+            }
+            a{
+                padding: 0 0 0 10px;
+                @include google_sans_font(bold);
+                //@include font-size(13);  //2800px dimensions: 30
+                @include font-resize-jbaby(30);
+                color: $primaryColor;
+                background-position: 0 0;
+                background-repeat: no-repeat;
+            }
+
+            @each $item in $utility-menu-items{
+                .#{$item} a:before{
+                    @include retina-sprite("#{$item}");
+                    content: ' ';
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+            
+            .facebook a, .youtube a, .instagram a, .google a{
+                display: inline-block;
+                height: 15px;
+                overflow: hidden;
+                width: 30px;
+            }      
+        }
+    }
+
+    .header-bottom {
+        margin-top: -40px;
+    }
+}
+
+@include device-size(tablet) {
+    .header-row  {
+        .header-bottom {
+            margin-top: 0px;
+        }  
+    }
+}
+

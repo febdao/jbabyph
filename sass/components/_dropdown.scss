@@ -1,0 +1,20 @@
+.pane-site-search-facets {
+    .dropdown-toggle {
+        background-color: transparent;
+        &:after {
+            color: $primaryColor;
+        }
+
+        &.opened {
+            background-color: #FFF;
+
+            .menu {
+                display: block;
+            }
+        }
+        .menu {
+            display: none;
+        }
+
+    }
+}

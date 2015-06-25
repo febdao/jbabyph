@@ -1,0 +1,58 @@
+
+.accordion > .menu {
+
+    a{
+        @include border-radius(10px);
+        @include gradient-create(vertical, #edf8fc, #dff2f8);
+        color: $primaryColor;
+        @include google_sans_font(bold);
+        @include font-size(14,15);
+        text-transform: uppercase;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        margin-top: 6px;
+    }
+    a.active-accordion {
+        @include border-radius(10px 10px 0px 0px);
+    }
+    .field{
+        padding: 10px;
+    }	
+    .field-item { 
+        a {  // Reset the links because they are picking up the accordian title link formatting.
+             background-color: transparent;
+             background-image: none;
+             @include border-radius(0);
+             padding: 0px;
+             margin: 0px;
+             display: inline;
+             font-family: $primaryFontFamily;
+             text-transform: none;
+             @include font-size(14,18);
+        }
+        // this is a workaround to show the list because the accordian has overridden the li display block
+        ul {
+            padding-left: 25px;
+        }
+        ul li {
+            @include font-size(14,18);
+            color:$grey_copy;
+            line-height: 2.5rem;  
+            @include google_sans_font(normal);
+        }
+        ul li:before {
+            content: "\2022";
+            display:inline-block;
+            padding-right: 6px;
+        }
+    }
+}
+
+.content-row .accordion.one-level li .field-item li {
+    padding: 0 0 0 12px;
+    text-indent: -6px;
+}
+
+.touch-nav .accordion li.expanded:after, .content-row .accordion li.expanded:after {
+    color: $primaryColor;
+}

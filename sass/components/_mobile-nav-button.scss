@@ -1,0 +1,24 @@
+.nav-button{
+
+  &:before{
+    color:$primaryColor;
+  }
+
+  &:hover,
+  &.active-nav{
+    &:before{
+      color:#fff;
+    }
+  }
+
+  &:hover,
+  &:focus{
+    background-color: $containerBackgroundHoverColor;
+  }
+
+  &.active-nav{
+    background-color: $containerBackgroundActiveColor;
+  }
+
+
+}

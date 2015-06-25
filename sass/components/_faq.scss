@@ -1,0 +1,38 @@
+
+.pane-bean-faq-page-questions, 
+.pane-bean-faq-product-usage, 
+.pane-bean-faq-baby-care, 
+.pane-bean-faq-discontinued-products,
+.pane-bean-specific-ingredient-related-ques,
+.pane-bean-general-ingredient-related-quest,
+.pane-bean-fragrance-related-questions,
+.pane-bean-animal-testing,
+.pane-bean-safety-standard-related-question,
+.pane-bean-natural-product-related-question,
+.pane-bean-external-organizations-websites,
+.pane-bean-johnsonsr-bedtimer,
+.pane-bean-johnsonsr-baby-language
+{
+    .field.field--name-title-field.field--type-text.field--label-above {
+        display: none;
+    }   
+}
+
+.bean-qa .field--name-field-qa-question p {
+
+    width: 95%;
+    @include font-resize-jbaby(30,42);
+    @include google_sans_font(regular);
+}
+
+.bean-qa .field--name-field-qa-answer {
+    ul {
+        display: block;
+
+        list-style-type: disc;
+        li {
+            overflow: visible;
+        }
+    }
+}
+
