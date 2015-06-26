@@ -287,7 +287,7 @@ $st_violet: #8f468f;
                 top: initial;
                 color: #FFF;
             }
-            .field__item {
+            div.field__item {
                 padding-top: 6%;
                 @include device-size(mobile) {
                     padding-top: 9%;    

@@ -13,6 +13,7 @@
             max-height: 231px;
             width: auto; 
             margin: 10px;
+            display: inline-block;
         }
         .grid-item .related-cta {
             @include bi-direction-style(text-align, center, text-align, center);

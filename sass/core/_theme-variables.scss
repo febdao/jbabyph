@@ -220,7 +220,10 @@ $language-direction-support: both;
 // @option left = logo to the left
 // @option center = logo in the center
 $headerRow: left;
-
+// Update the vertical placement of the logo (Note: $headerRowLogo = center ONLY works with $headerRow = left not $headerRow = center)
+// @option top = logo locked to the top of header row
+// @option center = logo locked to the center of header row
+$headerRowLogo: center;
 
 // Update the navigation-row styles
 // @option buttons = links are buttons, have horizontal margins between them
@@ -237,6 +240,21 @@ $navigationRowAlignment: side;
 // @option simple = simple layout
 $footerRow: simple;
 
+// Update the product listing grid display
+// @option left = product image and text to the left
+// @option center = product image and text centered
+$productListingGrid: left;
+
+// Update the product listing font styles
+// @option small = smaller product h2 font size
+// @option large = larger product h2 font size (default)
+$productFontSize: large;
+
+// Update the polls listing styles
+// @option one-quarter = width of /polls grid items changed to 25% width
+// @option one-third = width of /polls grid items changed to 33% width
+// @option half = width of /polls grid items changed to 50% width
+$pollsListing: one-quarter;
 ///////////////////////
 // Johnson's Baby Custom //
 //////////////////////
