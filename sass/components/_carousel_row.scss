@@ -65,6 +65,7 @@
         position:relative;
         vertical-align:top;
         width:100%;
+        min-height: 280px !important;
 
         &.first-slide{
             display:block;
@@ -643,7 +644,7 @@
 
     @include device-size(tablet) {	
 
-        display:block;
+        display:block !important;
         bottom: 0px;
         height: 20px;
         right: 10px;

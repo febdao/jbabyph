@@ -144,7 +144,11 @@ html.js #apachesolr-panels-search-form  .form-autocomplete {
         .block--apachesolr-panels { 
             background-color: transparent;
             padding: 0px;
-            padding: 0 0 0 15%;
+            padding: 13px;
+            width: auto;
+            left: 0;
+            right: 0;
+            margin-left: 0 !important;
         }
     }	
 }	
