@@ -1,0 +1,398 @@
+//Prominent
+
+.navigation-row {
+
+
+    background-color:$siteContentBackground;
+    height:50px;
+    min-height:50px;
+    overflow:visible;
+    position:relative;
+    width:100%;
+    z-index:100;
+
+    @include box-shadow(0px 3px 3px 0px #aaa);
+    .section-inner-wrapper{
+        overflow:visible;
+    }
+
+    @include device-size(tablet) {
+        display:none;
+    }
+
+    &.hidden{
+        overflow:hidden;
+    }
+
+    .main-menu{
+        @include inline-block();
+        width: 100%;
+    }
+
+    .menu{
+        @include bi-direction-style(padding-left, 0, padding-right, 0);
+        margin:0;
+    }
+
+
+    .menu > li{
+        @include inline-block();
+        @include bi-direction-style(padding-left, 7px, padding-right, 7px);
+        font-size:0;
+        vertical-align:top;
+        background-color: transparent;
+
+        &:first-child{
+            @include bi-direction-style(padding-left, 0, padding-right, 0);
+        }
+
+        &.expanded {
+            width: 13%;
+
+          &.hovered{
+            @include bi-direction-style(padding-right, 36px, padding-left, 36px);
+            &:before{
+              @include bi-direction-style(right, 14px, left, 14px);
+              content: "\e618";
+              color:currentcolor;
+              font-family:'icomoon';
+              font-size:20px;
+              line-height:$lineHeight115;
+              position:absolute;
+            }
+          }
+        }
+
+        &.home{
+            a{
+                display:block;
+                font-size:0;
+                width: 52px;
+                &:before {
+                    color:$primaryInteractiveForegroundColor;
+                    content: " ";
+                    display:block;
+                    @include retina-sprite("home");
+                    width: 32px;
+                    height: 31px;
+                    position:relative;
+
+                    top: 5px;
+                }
+            }
+        }
+
+        a{
+            
+            background-color: $primaryColor;
+            border-radius: 10px;
+            color:$primaryInteractiveForegroundColor;
+            display: table-cell;
+            @include google_sans_font(bold);
+            @include font-resize-jbaby(32, 32);
+            height:44px;
+            line-height:$lineHeight130;
+            padding:0 10px;
+            position:relative;
+            text-align:center;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+            vertical-align:middle;
+            width: 13%;
+
+
+            &:hover,
+                &:focus,
+                &.hovered{
+                background-color: lighten($mobileNavBackgroundSecond,5);
+            }
+
+            &:active,
+                &.active, &.active-trail{
+                background-color: $JJPink;
+            }
+
+            &:hover, &:focus, &.hovered, &:active, &.active, &.active-trail {
+                &:after
+                    {
+                    display:block;
+                }
+            }
+        }
+        &.bathingbaby a, &.bedtime a, &.diapering a {
+            line-height:$lineHeight130*2;
+        }
+    }
+
+    .menu li.expanded a.hovered:after {
+        content:  image-url('menu-expanded.png');
+        position: absolute;
+        left: 40%;
+        top: 37px;
+
+    }
+    .menu li.expanded a.active.hovered:after, .menu li.expanded a.active-trail.hovered:after {
+        content:  image-url('menu-expanded_active.png');
+        position: absolute;
+        left: 40%;
+        top: 37px;
+
+    }  
+
+    // Dropdown Styles
+    .two-levels,
+    .three-levels{
+        position:relative;
+
+        & > ul,
+        & .dropdown-full-width > ul{
+            @include bi-direction-style(text-align, left, text-align, right);
+            overflow:hidden;
+            position:absolute;
+
+            & > li{
+                @include bi-direction-style(padding-left, 0, padding-right, 0);
+                display:block;
+                position:relative;
+                border-radius: 0px;
+
+                a{
+                    @include font-resize-jbaby(32, 32);
+                    @include bi-direction-style(text-align, left, text-align, right);
+                    background-color: #FFF;
+                    color:$primaryInteractiveColor;
+                    display:block;
+                    height:auto;
+                    position:relative;
+                    border-radius: 0px;	 
+                    width: 100%;
+
+                    &:hover,
+                        &:focus{
+                        background-color: lighten($mobileNavBackgroundSecond,5);
+                        color:#FFF;
+
+                        &:after{
+                            display:none;
+                        }
+
+                        &:before{
+                            display:block;
+                        }
+                    }
+
+                    &:active,
+                        &.active, &.active-trail{
+                        background-color:$JJPink;
+                        color:#FFFFFF;
+
+                        &:after{
+                            display:none;
+                        }
+
+                        &:before{
+                            display:block;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    // Two level link styling
+    .two-levels {
+          li.expanded {
+             width:100%;
+          }
+          &.multi{
+            & > ul{
+              & > li{
+                border-top:0px solid $containerBackgroundActiveColor;
+
+                & > a{
+                  border-bottom:0;
+                }
+
+                ul a{
+                  @include font-size($extraSmallFontSize);
+                }
+              }
+            }
+          }
+
+          & > ul{
+            display:none;      
+
+            width:145px;
+            padding-top: 15px;
+
+            &:after{
+                @include bi-direction-style(left, 0, right, 0);
+                background-color: #FFF;
+                bottom:0;
+                content:'';
+                display:none;
+                height:0px !important;
+                position:absolute;
+                width:100%
+            }
+
+            &.bordered{
+                &:after{
+                    display:block;
+                }
+            }
+
+            &.change-side{
+                @include bi-direction-style(right, 0, left, 0);
+            }
+
+            & > li{
+                width:100%;
+
+                &.last{
+                    a{
+                        border-bottom:0;
+                    }
+                }
+
+                a{
+                    border-bottom: 1px dashed whitesmoke;
+                    padding:10px 14px;
+                    border-left: 1px solid whitesmoke;
+                    border-right: 1px solid whitesmoke;
+                    text-shadow: none;
+                }
+                &:first-child a{		
+                    border-radius: 10px 10px 0px 0px;
+                    border-top: 0px solid whitesmoke;
+                }
+                &:last-child a{		
+                    border-radius: 0px 0px 10px 10px;
+                    border-bottom: 0px solid whitesmoke;
+                }		
+                
+                ul{
+                  background-color:$containerBackgroundColor;
+                  display:none;
+
+                  li{
+                    @include bi-direction-style(padding-left, 0, padding-right, 0);
+                    width:100%;
+                  }
+
+                  a{
+                    @include bi-direction-style(padding-left, 36px, padding-right, 36px);
+                    background-color:transparent;
+                    border-bottom:0;
+                  }
+                }
+            }
+        }
+    }
+
+
+    // Three level link styling
+
+    .three-levels{
+        .dropdown-full-width{
+            @include bi-direction-style(left, 0, right, 0);
+            background-color:$containerBackgroundColor;
+            display:block;
+            position:absolute;
+
+            &:after{
+                @include bi-direction-style(left, 0, right, 0);
+                background-color:$containerBackgroundActiveColor;
+                bottom:0;
+                content:'';
+                display:none;
+                height:5px;
+                position:absolute;
+                width:100%;
+            }
+
+            &.bordered{
+                &:after{
+                    display:block;
+                }
+            }
+
+            & > ul{
+                display:none;
+                margin:0 auto;
+                max-width:$pageWidth;
+                padding:0 $outerPadding;
+                position:relative;
+                width:100%;
+
+                & > li{
+                    @include inline-block();
+                    font-size:0;
+                    font-weight:$strongEmphasisFontWeight;
+                    height:auto;
+                    margin-bottom:$outerPadding;
+                    padding:20px 0;
+                    vertical-align:top;
+                    width:32%;
+
+                    & li,
+                    & li:first-child{
+                        @include bi-direction-style(padding-left, 0, padding-right, 0);
+                        display:block;
+                        font-weight:$emphasisFontWeight;
+                        width:100%;
+
+                        a{
+                            @include bi-direction-style(padding-left, 30px, padding-right, 30px);
+                            background-color:$containerBackgroundColor;
+
+                            &:hover,
+                                &:focus{
+                                background-color:$containerBackgroundColor;
+                                text-decoration:underline;
+                            }
+
+                            &:active,
+                                &.active, &.active-trail{
+                                background-color:$containerBackgroundColor;
+                                text-decoration:underline;
+                            }
+                        }
+                    }
+                }
+
+                a{
+                    padding:7px 14px;
+                }
+            }
+        }
+    } 
+}
+
+
+// This conditional controls which styles are applied to the header-row region
+// $navigationRow is defined in the theme-variables (debug/styles/sass/core/theme-variables.scss) in the Structural Variables section
+
+@mixin navigationRow($layout){
+    @if ($layout == row) {
+        // debug/styles/sass/templates/navigation-row.row.scss
+        @include navigationRowRow();
+    } @else if ($layout == text) {
+        // debug/styles/sass/templates/navigation-row.text.scss
+        @include navigationRowText();
+    }
+}
+
+@mixin navigationRowAlign($direction){
+    @if ($direction == center) {
+        // debug/styles/sass/templates/navigation-row-align.center.scss
+        @include navigationRowAlignCenter();
+    }
+}
+
+// Update the navigation-row menu layout
+@include navigationRow($navigationRow);
+// Update the placement of the navigation-row menu
+@include navigationRowAlign($navigationRowAlignment);
