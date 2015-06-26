@@ -96,10 +96,21 @@
 }
 .page-node-115 {
     .text-box-like-callout {
-        p {    
-            color: #efbc6c;
-            @include font-size($extraLargeFontSize);
-        }
+      p {    
+        color: #efbc6c;
+        @include font-size($extraLargeFontSize);
+      }
+      margin-bottom: 75px;
+    }
+    .text-box-image{
+      background-image: image-url('backgrounds/newborns.png');
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      bottom: -75px;
+      height: 208px;
+      position: absolute;
+      right: 0;
+      width: 236px;
     }
 }
 .page-node-119 {
@@ -110,7 +121,7 @@
         height: 188px;
         width: 220px;
         position:absolute;
-        bottom: -50px;
+        bottom: -85px;
         right: 0;
         @include device-size(tablet) {
             background-image: none;

@@ -60,7 +60,7 @@
     .slide{
         @include inline-block();
         @include bi-direction-style(float, left, float, right);
-        display:none;
+        //display:none;
         overflow:hidden;
         position:relative;
         vertical-align:top;
@@ -79,26 +79,27 @@
             top:0;
             left: 0;
             width:100%;
-
-            @include device-size(large-desktop) {
-                top: 11%;
-            }
-            @include device-size(desktop) {
-                top: 4%;
-            }		
-            @include device-size(tablet) {   
-                top: 0;
-            }	  
-
             padding-bottom: 150px;  
-            @include device-size(tablet) { 
-                padding-bottom: 50px;      
-            }	  
 
             @media (max-width: $pageWidth) {
                 @include bi-direction-style(left, 0, right, 0 );
                 @include bi-direction-style(margin-left, 0, margin-right, 0 );
             }
+
+            @include device-size(tablet) {
+                padding-bottom: 50px;
+                top: 0;
+            }
+
+            @include device-size(desktop) {
+                top: 4%;
+            }
+
+            @include device-size(large-desktop) {
+                top: 11%;
+            }
+
+
             .inner {
                 @include bi-direction-style(padding, 2% 0 2% 8%, padding, 2% 8% 2% 0 );
                 @include device-size(mobile) { 
@@ -118,11 +119,11 @@
                         h3 {
                             @include google_lato_font(light);
                         }
-                        @include at-tablet-breakpoint{
+                        @include breakpoint($tablet-breakpoint) {
 
                             @include font-resize-jbaby(70,70);
                         }
-                        @include at-mobile-breakpoint{
+                        @include breakpoint($mobile-breakpoint) {
                             color: $HeroTitles;
                             @include font-resize-jbaby(60,60);
                             width: 50%;
@@ -170,7 +171,7 @@
                     position: absolute;
                 }
 
-                @include at-mobile-breakpoint{
+                @include breakpoint($mobile-breakpoint) {
                     @include font-size(15, 18);
                     padding: 8px 32px 6px 18px;
                     height: auto;
@@ -186,21 +187,21 @@
             @include bi-direction-style(padding, 1% 0 2% 8%, padding, 1% 8% 2% 0 );
             width:50%;
             max-width: 1028px;
-            @include device-size(large-desktop) {
-                margin-left: 9%;
-                width: 35%;
-            }
-            @include device-size(desktop) {
-                margin-left: 5%;
-                width: 40%;
+            @include device-size(mobile) {
+                width: 100%;
+
             }
             @include device-size(tablet) {
                 margin-left: 0;
                 width: 45%;
             }
-            @include device-size(mobile) {
-                width: 100%;
-
+            @include device-size(desktop) {
+                margin-left: 5%;
+                width: 40%;
+            }
+            @include device-size(large-desktop) {
+                margin-left: 9%;
+                width: 35%;
             }
             display: block;
 
@@ -474,7 +475,7 @@
             color: $HeroTitles;
             @include google_lato_font(light);
             margin: 0 0 2% 0;
-            @include at-tablet-breakpoint{
+            @include breakpoint($tablet-breakpoint) {
                 @include font-resize-jbaby(70, 70);
 
             }
@@ -499,14 +500,12 @@
 
     .inner{ // content container
             @include bi-direction-style(padding, 1% 0 2% 8%, padding, 1% 8% 2% 0 );
-            @include device-size(large-desktop) {
-                margin-left: 3%;
-                width: 35%;
-            }
-            @include device-size(desktop) {
-                margin-left: 0;
-                width: 35%;
-            }
+            @include device-size(mobile) {
+                width: 100%;
+                p {
+                    display: block;
+                }            
+            }  
             @include device-size(tablet) {
                 margin-top: 1%;
                 width: 40%;
@@ -514,12 +513,14 @@
                     display: block;
                 }            
             }
-            @include device-size(mobile) {
-                width: 100%;
-                p {
-                    display: block;
-                }            
-            }        
+            @include device-size(desktop) {
+                margin-left: 0;
+                width: 35%;
+            }     
+            @include device-size(large-desktop) {
+                margin-left: 3%;
+                width: 35%;
+            } 
     }
 
 }
@@ -548,7 +549,7 @@
             @include bi-direction-style(left, 0 !important, right, 0 !important);
             @include bi-direction-style(margin-left, 0 !important, margin-right, 0!important);
             width:100% !important;
-            max-width: 100%;
+            max-width: 100% !important;
         }
 
 
@@ -637,7 +638,7 @@
 } 
 
 .pane-bean-homepage-carousel .pagination-container{
-    display: none;
+    display: none !important;
 
 
     @include device-size(tablet) {	
