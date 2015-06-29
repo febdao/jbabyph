@@ -501,27 +501,27 @@
 
     .inner{ // content container
             @include bi-direction-style(padding, 1% 0 2% 8%, padding, 1% 8% 2% 0 );
-            @include device-size(mobile) {
-                width: 100%;
-                p {
-                    display: block;
-                }            
-            }  
             @include device-size(tablet) {
                 margin-top: 1%;
                 width: 40%;
                 p {
                     display: block;
-                }            
+                }
+            }
+            @include device-size(mobile) {
+                width: 100%;
+                p {
+                    display: block;
+                }
             }
             @include device-size(desktop) {
                 margin-left: 0;
                 width: 35%;
-            }     
+            }
             @include device-size(large-desktop) {
                 margin-left: 3%;
                 width: 35%;
-            } 
+            }
     }
 
 }
@@ -682,6 +682,10 @@
 }
 
 @include device-size(mobile) { 
+    .carousel-row .slide {
+        float: none;
+        max-width: 90%;
+    }
 
     .view-jjbos-carousel-slideshow {
         min-height: 225px;

@@ -37,11 +37,11 @@
             margin: auto;
             position: absolute;
         }
-        @include device-size(mobile) {      
+        @include device-size(mobile) {
             text-align: center;
-            &:after {            
+            &:after {
                 position: relative;
-                margin-left: 10px;       
+                margin-left: 10px;
                 top: 5px;
             }
         }
@@ -111,7 +111,7 @@
         bottom: 15px;
         @include device-size(tablet) {
            bottom: 45px;
-           position: relative;
+           position: absolute;
         }
         @include device-size(mobile) {
             bottom: 20px;
@@ -146,13 +146,14 @@
     .field--name-field-taco-link-call-to-action   {
         position: static;
         width: 50%;
-        @include device-size(tablet) {
+        /*@include device-size(tablet) {
            bottom: 10px;
            position: absolute;
-        }  
+        }*/
         @include device-size(mobile) {
            position: relative;
-        }         
+           width: 100%;
+        }
     }
 
     .field--name-field-taco-links {
@@ -161,6 +162,9 @@
 
     .call-to-action {
         width: 100%;
+        @include device-size(mobile) {
+           bottom: 0;
+        }
     }
 
 
