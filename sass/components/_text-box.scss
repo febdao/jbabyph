@@ -36,6 +36,10 @@
     h2 {
         padding-left: 6%;
         @include font-resize-jbaby(50,36);
+
+        @include device-size(tablet) {
+            line-height: inherit;
+        }    
     }
     p{
         margin-left: 6% !important;
@@ -121,7 +125,7 @@
         height: 188px;
         width: 220px;
         position:absolute;
-        bottom: -85px;
+        bottom: -50px;
         right: 0;
         @include device-size(tablet) {
             background-image: none;
@@ -159,11 +163,17 @@
         }
     }   
     .text-box-like-callout {
+        margin-bottom: 75px;
+        @include device-size(tablet) {
+            padding: 15px;
+        }    
         p {    
             color: #8bd5ef;
             @include font-size($extraLargeFontSize);
+            @include device-size(tablet) {
+                @include font-size($largeFontSize);
+            } 
         }
-        margin-bottom: 75px;
     }
     @include device-size(tablet) {
         .spacer { display: none;}
