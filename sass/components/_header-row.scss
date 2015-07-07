@@ -74,7 +74,7 @@
             a{
                 padding: 0 0 0 10px;
                 @include google_sans_font(bold);
-                //@include font-size(13);  //2800px dimensions: 30
+                @include font-size(13);  //2800px dimensions: 30
                 @include font-resize-jbaby(30);
                 color: $primaryColor;
                 background-position: 0 0;

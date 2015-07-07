@@ -17,9 +17,6 @@ $fontPath: "../../contrib-fonts/";
 
 }
 
-
-
-
 @font-face {
     font-family: 'omnesbold';
     src: url('#{$fontPath}omnes-bold-webfont.eot');
@@ -32,9 +29,6 @@ $fontPath: "../../contrib-fonts/";
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'omneslight';
@@ -62,9 +56,6 @@ $fontPath: "../../contrib-fonts/";
 
 }
 
-
-
-
 @font-face {
     font-family: 'omnessemibold_italic';
     src: url('#{$fontPath}omnessemibold-italic-webfont.eot');
@@ -91,9 +82,6 @@ $fontPath: "../../contrib-fonts/";
 
 }
 
-
-
-
 @font-face {
     font-family: 'fs_albertbold';
     src: url('#{$fontPath}fsalbert-bold-webfont.eot');
@@ -104,5 +92,155 @@ $fontPath: "../../contrib-fonts/";
          url('#{$fontPath}fsalbert-bold-webfont.svg#fs_albertbold') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+
+[data-icon="home"]:before,
+.icon-home:before {
+  content: "\e600";
+}
+
+[data-icon="print"]:before,
+.icon-print:before {
+  content: "\e601";
+}
+
+[data-icon="plus"]:before,
+.icon-plus:before {
+  content: "\e60a";
+}
+
+[data-icon="minus"]:before,
+.icon-minus:before {
+  content: "\e60b";
+}
+
+[data-icon="info"]:before,
+.icon-info:before {
+  content: "\e615";
+}
+
+[data-icon="search"]:before,
+.icon-search:before {
+  content: "\e602";
+}
+
+[data-icon="mail"]:before,
+.icon-mail:before {
+  content: "\e603";
+}
+
+[data-icon="facebook"]:before,
+.icon-facebook:before {
+  content: "\e604";
+}
+
+[data-icon="location"]:before,
+.icon-location:before {
+  content: "\e605";
+}
+
+[data-icon="pinterest"]:before,
+.icon-pinterest:before {
+  content: "\e606";
+}
+
+[data-icon="twitter"]:before,
+.icon-twitter:before {
+  content: "\e607";
+}
+
+[data-icon="linkedin"]:before,
+.icon-linkedin:before {
+  content: "\e608";
+}
+
+[data-icon="menu"]:before,
+.icon-menu:before {
+  content: "\e609";
+}
+
+[data-icon="cancel"]:before,
+.icon-cancel:before {
+  content: "\e60c";
+}
+
+[data-icon="checkmark"]:before,
+.icon-checkmark:before {
+  content: "\e60d";
+}
+
+[data-icon="notice"]:before,
+.icon-notice:before {
+  content: "\e60e";
+}
+
+[data-icon="close"]:before,
+.icon-close:before {
+  content: "\e616";
+}
+
+[data-icon="caret-down"]:before,
+.icon-caret-down:before {
+  content: "\e60f";
+}
+
+[data-icon="caret-up"]:before,
+.icon-caret-up:before {
+  content: "\e610";
+}
+
+[data-icon="caret-right"]:before,
+.icon-caret-right:before {
+  content: "\e611";
+}
+
+[data-icon="caret-left"]:before,
+.icon-caret-left:before {
+  content: "\e612";
+}
+
+[data-icon="angle-right"]:before,
+.icon-angle-right:before {
+  content: "\e613";
+}
+
+[data-icon="angle-left"]:before,
+.icon-angle-left:before {
+  content: "\e614";
+}
+
+[data-icon="angle-up"]:before,
+.icon-angle-up:before {
+  content: "\e617";
+}
+
+[data-icon="angle-down"]:before,
+.icon-angle-down:before {
+  content: "\e618";
+}
+
+[data-icon="play"]:before,
+.icon-play:before {
+  content: "\e619";
+}
+
+[data-icon="pause"]:before,
+.icon-pause:before {
+  content: "\e61a";
+}
+
+[data-icon="external-link"]:before,
+.icon-external-link:before {
+  content: "\e61b";
+}
+
+[data-icon="mail"]:before,
+.icon-mail:before {
+  content: "\e603";
+}
+
+[data-icon="check"]:before,
+.icon-check:before {
+  content: "\e61c";
 }

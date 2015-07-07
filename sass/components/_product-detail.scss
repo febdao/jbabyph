@@ -15,10 +15,10 @@
             color: $secondaryForegroundColor;
             margin: 0 0 10% 0;
 
-            @include at-tablet-breakpoint{
+            @include breakpoint($tablet-breakpoint) {
                 @include font-size(35,37);
             }
-            @include at-mobile-breakpoint{
+            @include breakpoint($mobile-breakpoint) {
                 @include font-size(30,32);
             }
         }

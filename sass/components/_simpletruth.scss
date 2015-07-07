@@ -203,12 +203,14 @@ $st_violet: #8f468f;
 }
 
 .mobile-simple-truth-header {
-    @include device-size(desktop) {
-        display: none;
-    }
+    display: none;
     @include device-size(mobile) {
         display: block;
     }
+    /*
+    @include device-size(desktop) {
+        display: none;
+    }*/
 } 
 
 // common myths
@@ -287,7 +289,7 @@ $st_violet: #8f468f;
                 top: initial;
                 color: #FFF;
             }
-            .field__item {
+            div.field__item {
                 padding-top: 6%;
                 @include device-size(mobile) {
                     padding-top: 9%;    
@@ -322,7 +324,7 @@ $st_violet: #8f468f;
                 @include border-radius(0);
                 background-color: #f0fbff;
                 border: 0px;
-            }            
+            }
             .back-to-top {
                 display: none;
             }
@@ -705,7 +707,7 @@ $st_violet: #8f468f;
                 padding-top: 14%;
             }
             p {
-                margin-right: -10%;
+                //margin-right: -10%;
             }
         }
     }    
@@ -975,7 +977,7 @@ $st_violet: #8f468f;
 
 .page-node-151 .bottom-row {
     @include device-size(mobile) { 
-        background-image: image-url('backgrounds/stayintouch_mobile_header.png');
+        //background-image: image-url('backgrounds/stayintouch_mobile_header.png');
         background-size: 100% auto;
     }    
     margin-left: 0;

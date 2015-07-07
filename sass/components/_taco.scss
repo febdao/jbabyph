@@ -37,11 +37,11 @@
             margin: auto;
             position: absolute;
         }
-        @include device-size(mobile) {      
+        @include device-size(mobile) {
             text-align: center;
-            &:after {            
+            &:after {
                 position: relative;
-                margin-left: 10px;       
+                margin-left: 10px;
                 top: 5px;
             }
         }
@@ -51,6 +51,13 @@
     .field-collection-container {
         border-bottom: 0px;
         margin-bottom: 0px;
+        display: block;
+    }
+    &.horizontal.fp-mdayfday {
+        position: relative;
+        .bean-taco {
+            height: 100%;
+        }
     }
 
     @include device-size(mobile) {
@@ -104,7 +111,7 @@
         bottom: 15px;
         @include device-size(tablet) {
            bottom: 45px;
-           position: relative;
+           position: absolute;
         }
         @include device-size(mobile) {
             bottom: 20px;
@@ -120,7 +127,9 @@
       bottom: 10px;
       left: 5px;
 }
-
+.front .one-third .bean-taco {
+    height: 100%;
+}
 @include device-size(tablet) {
     .front .pane-taco-pane .call-to-action {
         bottom: 0;
@@ -136,17 +145,36 @@
 .pane-taco-pane.horizontal {
     .field--name-field-taco-link-call-to-action   {
         position: static;
-        @include device-size(tablet) {
+        width: 50%;
+        /*@include device-size(tablet) {
            bottom: 10px;
            position: absolute;
-        }  
+        }*/
         @include device-size(mobile) {
            position: relative;
-        }         
+           width: 100%;
+        }
     }
 
     .field--name-field-taco-links {
         width: 100%;
+    }
+
+    .call-to-action {
+        width: 100%;
+        @include device-size(mobile) {
+           bottom: 0;
+        }
+    }
+
+
+    @include bi-direction-style(right, 0, left, 0);
+    bottom: 0;
+    // position: absolute;
+
+    @include device-size(mobile) {
+        position:relative;
+        width:100%;
     }
     
   
@@ -155,7 +183,11 @@
             //max-height: 200px;
             //overflow: hidden;
         }
-    } 
+    }
+
+    &.fp-mdayfday {
+        width: 100%;
+    }
 
 }
 
@@ -163,16 +195,47 @@
     width: 80%;
     @include device-size(tablet) {
         height: 150px;
-    }    
+    }
     @include device-size(mobile) {
         height: inherit;
     }
 }
 
-
 .pane-bean-baby-massage-guide {
     ul {
         padding: 0;
         list-style-type: none;
+    }
+}
+
+.content-col {
+    padding-bottom: 0 !important;
+}
+
+.taco-polls ,
+.pane-taco-pane {
+    .taco-inner {
+        height: 100%;
+    }
+}
+
+.pane-taco-pane {
+    .content,
+    .bean-taco {
+        position: relative;
+        height: 100%;
+
+        &:after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+    }
+}
+
+html[dir="ltr"] {
+    .pane-taco-pane,
+    .taco-polls {
+        margin-right: 0;
     }
 }

@@ -52,7 +52,13 @@
 
 
 }
-
+.pane-bean-moms-around-world-trust-johnsons .bean-taco {
+    .field--name-field-taco-description {
+        h2, h3, h4 {
+            color: $JJPink;
+        }
+    }
+}
 .front .one-third .bean-taco {
     padding: .5rem;
     .pane-title {
@@ -116,6 +122,7 @@
         h2, h3, p, .call-to-action {
             padding-left: 1.5rem;
             padding-right: 1.5rem;
+            height: auto !important;
         }
 
         h2, h3, h4 {
@@ -126,12 +133,12 @@
         p {
             @include google_sans_font(regular);
 
-            @include font-resize-jbaby(28,40);    
+            @include font-resize-jbaby(28,40);
             @include device-size(mobile) {
-                @include font-size(14,18);    
+                @include font-size(14,18);
             }
         }
-    }    
+    }
 
     img {
         @include border-radius(1rem 0 0 1rem);

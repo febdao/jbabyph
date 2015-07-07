@@ -34,7 +34,7 @@
             }
         }
     }
-    @include at-mobile-breakpoint{
+    @include breakpoint($mobile-breakpoint) {
         .node--product-short .content {
             text-align: center;
         }
